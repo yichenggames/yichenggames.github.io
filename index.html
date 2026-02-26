@@ -1,7 +1,120 @@
-<p>Hi!</p>
-<p>I am Yicheng Lu. Welcome to my Personal Website</p>
-<p>Please visit the website below to see the details of games</p>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yicheng Lu | Game Designer Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* 基础样式 */
+        :root {
+            --primary-color: #333;
+            --accent-color: #007bff;
+            --bg-color: #ffffff;
+        }
 
-<ul>
-  <li> <a href="https://www.yichenggame.com/">Portfolio</a> </li>
-</ul>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            line-height: 1.6;
+            color: var(--primary-color);
+            background-color: var(--bg-color);
+        }
+
+        /* 导航栏 */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 10%;
+            position: sticky;
+            top: 0;
+            background: white;
+            z-index: 1000;
+            border-bottom: 1px solid #eee;
+        }
+
+        .logo { font-weight: 700; font-size: 1.5rem; }
+        
+        nav ul { list-style: none; display: flex; margin: 0; }
+        nav ul li { margin-left: 25px; }
+        nav ul li a { text-decoration: none; color: #333; font-weight: 400; transition: 0.3s; }
+        nav ul li a:hover { color: var(--accent-color); }
+
+        /* 首屏 Hero 区域 */
+        .hero {
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: #f9f9f9;
+            padding: 0 20px;
+        }
+
+        .hero h1 { font-size: 3.5rem; margin-bottom: 10px; }
+        .hero p { font-size: 1.2rem; color: #666; max-width: 600px; }
+
+        /* 作品集网格预览 */
+        .portfolio-grid {
+            padding: 50px 10%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            background: #eee;
+            aspect-ratio: 16 / 9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .project-card:hover { transform: translateY(-5px); }
+        .project-card img { width: 100%; height: 100%; object-fit: cover; }
+
+        /* 页脚 */
+        footer {
+            text-align: center;
+            padding: 40px;
+            font-size: 0.9rem;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">YICHENG LU</div>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#level-design">Level Design</a></li>
+            <li><a href="#game-design">Game Design</a></li>
+            <li><a href="#vfx">VFX</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <h1>Hello! I'm Yicheng Lu</h1>
+        <p>Game Designer / Level Designer / Technical Designer / VFX Artist</p>
+    </section>
+
+    <div class="portfolio-grid">
+        <div class="project-card"><span>Latest Project: Cursed Crown LD</span></div>
+        <div class="project-card"><span>Old Temple</span></div>
+        <div class="project-card"><span>VFX Study</span></div>
+    </div>
+
+    <footer>
+        © 2021 by Yicheng Lu. Created with Code.
+    </footer>
+
+</body>
+</html>
