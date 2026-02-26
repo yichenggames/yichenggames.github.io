@@ -1,119 +1,136 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yicheng Lu | Game Designer Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Yicheng Lu | Game Designer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
-        /* 基础样式 */
-        :root {
-            --primary-color: #333;
-            --accent-color: #007bff;
-            --bg-color: #ffffff;
+        body { font-family: 'Inter', sans-serif; margin: 0; padding: 0; color: #333; line-height: 1.6; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 40px; }
+
+        /* Header & Nav */
+        header { text-align: center; padding: 60px 0 30px; }
+        header h1 { font-size: 2.2rem; letter-spacing: 5px; margin: 0; text-transform: uppercase; font-weight: 400; }
+        header p { font-size: 0.75rem; letter-spacing: 3px; color: #777; margin-top: 8px; text-transform: uppercase; }
+        nav { display: flex; justify-content: center; gap: 50px; padding: 25px 0; margin-bottom: 60px; }
+        nav a { text-decoration: none; color: #888; font-size: 0.8rem; transition: 0.3s; }
+        nav a:hover { color: #000; }
+
+        /* Hero Section (Hello!) */
+        .hero { display: flex; align-items: flex-start; gap: 60px; margin-bottom: 100px; }
+        .hero-text { flex: 1.2; }
+        .hero-text h2 { font-family: 'Playfair Display', serif; font-size: 4rem; color: #1a3a5a; margin: 0 0 30px 0; }
+        .hero-text h3 { font-size: 1.4rem; font-weight: 400; margin-bottom: 15px; color: #444; }
+        .hero-text p { font-size: 0.95rem; color: #888; margin-bottom: 5px; }
+        .btn-about { display: inline-block; background: #b06b6b; color: white; padding: 12px 50px; text-decoration: none; font-size: 0.8rem; margin-top: 30px; border-radius: 2px; }
+        .hero-image { flex: 1; }
+        .hero-image img { width: 100%; box-shadow: 10px 10px 0px #f0f0f0; }
+
+        /* Project Section */
+        .section-title { font-family: 'Playfair Display', serif; font-size: 2.2rem; margin-bottom: 40px; border-top: 1px dotted #ddd; padding-top: 40px; }
+        .project-link-wrap { text-align: center; margin-bottom: 30px; }
+        .project-link { color: #cbb35a; font-size: 1.5rem; font-weight: bold; text-decoration: underline; text-underline-offset: 8px; }
+
+        /* 2x2 Image Grid (复刻截图排版) */
+        .image-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 20px; margin-bottom: 40px; }
+        .image-grid-bottom { display: grid; grid-template-columns: 2fr 1fr; gap: 20px; margin-bottom: 40px; }
+        .image-grid img, .image-grid-bottom img { width: 100%; height: auto; display: block; }
+
+        /* Project Description (图二内容) */
+        .project-info { max-width: 900px; margin: 0 auto; }
+        .project-info p { margin-bottom: 20px; font-size: 1.05rem; color: #555; }
+        .highlight-yellow { color: #cbb35a; font-weight: bold; }
+        .highlight-bold { font-weight: bold; color: #000; }
+
+        /* Social Icons & Footer */
+        .footer { text-align: center; padding: 80px 0 40px; border-top: 1px solid #eee; margin-top: 80px; }
+        .social-links {
+            margin-bottom: 15px;
         }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            margin: 0;
-            line-height: 1.6;
-            color: var(--primary-color);
-            background-color: var(--bg-color);
+        .social-links a {
+            color: #333;             /* 图标颜色：深灰色 */
+            margin: 0 12px;          /* 图标之间的间距 */
+            font-size: 1.2rem;       /* 图标大小 */
+            text-decoration: none;
+            transition: color 0.3s;  /* 增加一个丝滑的变色效果 */
         }
-
-        /* 导航栏 */
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 10%;
-            position: sticky;
-            top: 0;
-            background: white;
-            z-index: 1000;
-            border-bottom: 1px solid #eee;
+        .social-links a:hover {
+            color: #cbb35a;          /* 鼠标悬停时变成你作品集的金色 */
         }
+        .copyright { font-size: 0.7rem; color: #aaa; letter-spacing: 1px; }
 
-        .logo { font-weight: 700; font-size: 1.5rem; }
-        
-        nav ul { list-style: none; display: flex; margin: 0; }
-        nav ul li { margin-left: 25px; }
-        nav ul li a { text-decoration: none; color: #333; font-weight: 400; transition: 0.3s; }
-        nav ul li a:hover { color: var(--accent-color); }
-
-        /* 首屏 Hero 区域 */
-        .hero {
-            height: 60vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            background: #f9f9f9;
-            padding: 0 20px;
-        }
-
-        .hero h1 { font-size: 3.5rem; margin-bottom: 10px; }
-        .hero p { font-size: 1.2rem; color: #666; max-width: 600px; }
-
-        /* 作品集网格预览 */
-        .portfolio-grid {
-            padding: 50px 10%;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .project-card {
-            background: #eee;
-            aspect-ratio: 16 / 9;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 8px;
-            overflow: hidden;
-            position: relative;
-            cursor: pointer;
-            transition: transform 0.3s;
-        }
-
-        .project-card:hover { transform: translateY(-5px); }
-        .project-card img { width: 100%; height: 100%; object-fit: cover; }
-
-        /* 页脚 */
-        footer {
-            text-align: center;
-            padding: 40px;
-            font-size: 0.9rem;
-            color: #999;
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero { flex-direction: column; }
+            .image-grid, .image-grid-bottom { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
 
+    <header>
+        <h1>Yicheng Lu</h1>
+        <p>Game Designer</p>
+    </header>
+
     <nav>
-        <div class="logo">YICHENG LU</div>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#level-design">Level Design</a></li>
-            <li><a href="#game-design">Game Design</a></li>
-            <li><a href="#vfx">VFX</a></li>
-        </ul>
+        <a href="#">About</a>
+        <a href="#">Level Design</a>
+        <a href="#">Game Design</a>
+        <a href="#">VFX Study</a>
+        <a href="#">Award</a>
     </nav>
 
-    <section class="hero">
-        <h1>Hello! I'm Yicheng Lu</h1>
-        <p>Game Designer / Level Designer / Technical Designer / VFX Artist</p>
-    </section>
+    <div class="container">
+        <section class="hero">
+            <div class="hero-text">
+                <h2>Hello!</h2>
+                <h3>My name is Yicheng Lu</h3>
+                <p>Game Designer / Level Designer / Technical Designer</p>
+                <p>VFX Artist / Programmer</p>
+                <a href="#" class="btn-about">About Me</a>
+            </div>
+            <div class="hero-image">
+                <img src="me.jpg" alt="Profile Image">
+            </div>
+        </section>
 
-    <div class="portfolio-grid">
-        <div class="project-card"><span>Latest Project: Cursed Crown LD</span></div>
-        <div class="project-card"><span>Old Temple</span></div>
-        <div class="project-card"><span>VFX Study</span></div>
+        <h2 class="section-title">Latest Project</h2>
+        
+        <div class="project-link-wrap">
+            <a href="#" class="project-link">Cursed Crown LD 🔗</a>
+        </div>
+
+        <div class="image-grid">
+            <img src="pic1.jpg" alt="GDC Winner">
+            <img src="pic2.jpg" alt="Cursed Crown Start Screen">
+        </div>
+
+        <div class="image-grid-bottom">
+            <img src="pic3.jpg" alt="Game Environment">
+            <img src="pic4.jpg" alt="Gameplay Action">
+        </div>
+
+        <div class="project-info">
+            <p><span class="highlight-yellow">Cursed Crown</span> is the an anime-style ARPG where your journey is shaped by personalized AI companion and an emotionally resonant, infinitely replayable experience...</p>
+            
+            <p><span class="highlight-yellow">Genre:</span> ARPG, AI</p>
+            
+            <p><span class="highlight-yellow">Contributions:</span> Served as the Lead Level Designer on the team while also contributing to gameplay design. Responsibilities included <span class="highlight-yellow">designing all in-game levels</span>, developing level-specific combat mechanics, and programming enemy behavior logic. Level flow was crafted to support both single-player and multiplayer experiences. Created <span class="highlight-yellow">modular assets</span> for procedural generating function in the levels.</p>
+        </div>
     </div>
 
-    <footer>
-        © 2021 by Yicheng Lu.
+<footer class="footer">
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/yicheng-lu-33885a1ba/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="你的Facebook链接" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <a href="你的Instagram链接" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+        <div class="copyright">
+            © 2021 by Yicheng Lu.
+        </div>
     </footer>
 
 </body>
