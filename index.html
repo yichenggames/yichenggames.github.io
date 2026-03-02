@@ -153,14 +153,17 @@
                 <a href="#" style="color: #333; text-decoration: none;">Cursed Crown LD</a>
             </h3>
             <p style="font-size: 0.85rem; color: #888; margin: 0 0 16px;">06.2024 - 10.2025</p>
-            <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-                <img src="images/MainPage/menuscreen.png" style="height: 180px; object-fit: cover; flex: 2;" alt="">
-                <img src="images/MainPage/GDC Best In Play.png" style="height: 180px; object-fit: cover; flex: 1;" alt="">
-                <img src="images/MainPage/Verdis_showcase.png" style="height: 180px; object-fit: cover; flex: 2;" alt="">
-            </div>
-            <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 12px;">
-                <img src="images/Cursed Crown/replayablelevel1_1.png" style="height: 180px; object-fit: cover; flex: 2;" alt="">
-                <img src="images/MainPage/ReplayableLevel_showcase.png" style="height: 180px; object-fit: cover; flex: 1;" alt="">
+            <div class="carousel" id="carousel-cursedcrown">
+                <div class="carousel-track">
+                    <img src="images/MainPage/menuscreen.png" alt="">
+                    <img src="images/MainPage/GDC Best In Play.png" alt="">
+                    <img src="images/MainPage/Verdis_showcase.png" alt="">
+                    <img src="images/Cursed Crown/replayablelevel1_1.png" alt="">
+                    <img src="images/MainPage/ReplayableLevel_showcase.png" alt="">
+                </div>
+                <button class="carousel-btn prev" onclick="moveCarousel('carousel-cursedcrown', -1)">&#8249;</button>
+                <button class="carousel-btn next" onclick="moveCarousel('carousel-cursedcrown', 1)">&#8250;</button>
+                <div class="carousel-dots" id="dots-carousel-cursedcrown"></div>
             </div>
         </div>
 
@@ -170,11 +173,16 @@
                 <a href="#" style="color: #333; text-decoration: none;">Old Temple</a>
             </h3>
             <p style="font-size: 0.85rem; color: #888; margin: 0 0 16px;">10.2023 - 12.2023</p>
-            <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-                <img src="images/Old Temple/Paper Design_14.png" style="height: 180px; object-fit: cover; flex: 1;" alt="">
-                <img src="images/Old Temple/overview.png" style="height: 180px; object-fit: cover; flex: 1;" alt="">
-                <img src="images/Old Temple/Blockout_1.png" style="height: 180px; object-fit: cover; flex: 1;" alt="">
-                <img src="images/Old Temple/Blockout_2.png" style="height: 180px; object-fit: cover; flex: 1;" alt="">
+            <div class="carousel" id="carousel-oldtemple">
+                <div class="carousel-track">
+                    <img src="images/Old Temple/Paper Design_14.png" alt="">
+                    <img src="images/Old Temple/overview.png" alt="">
+                    <img src="images/Old Temple/Blockout_1.png" alt="">
+                    <img src="images/Old Temple/Blockout_2.png" alt="">
+                </div>
+                <button class="carousel-btn prev" onclick="moveCarousel('carousel-oldtemple', -1)">&#8249;</button>
+                <button class="carousel-btn next" onclick="moveCarousel('carousel-oldtemple', 1)">&#8250;</button>
+                <div class="carousel-dots" id="dots-carousel-oldtemple"></div>
             </div>
         </div>
 
@@ -184,11 +192,16 @@
                 <a href="#" style="color: #333; text-decoration: none;">Dishonored 2223</a>
             </h3>
             <p style="font-size: 0.85rem; color: #888; margin: 0 0 16px;">09.2023 - 10.2023</p>
-            <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-                <img src="images/Dishonored 2223/overview.png" style="height: 180px; object-fit: cover; flex: 2;" alt="">
-                <img src="images/Dishonored 2223/startroom.png" style="height: 180px; object-fit: cover; flex: 2;" alt="">
-                <img src="images/Dishonored 2223/sliding.png" style="height: 180px; object-fit: cover; flex: 1;" alt="">
-                <img src="images/Dishonored 2223/Map Overview Layout.png" style="height: 180px; object-fit: cover; flex: 1;" alt="">
+            <div class="carousel" id="carousel-dishonored">
+                <div class="carousel-track">
+                    <img src="images/Dishonored 2223/overview.png" alt="">
+                    <img src="images/Dishonored 2223/startroom.png" alt="">
+                    <img src="images/Dishonored 2223/sliding.png" alt="">
+                    <img src="images/Dishonored 2223/Map Overview Layout.png" alt="">
+                </div>
+                <button class="carousel-btn prev" onclick="moveCarousel('carousel-dishonored', -1)">&#8249;</button>
+                <button class="carousel-btn next" onclick="moveCarousel('carousel-dishonored', 1)">&#8250;</button>
+                <div class="carousel-dots" id="dots-carousel-dishonored"></div>
             </div>
         </div>
         
