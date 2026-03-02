@@ -19,6 +19,7 @@
         nav { background-color: #f9f9f9; display: flex; justify-content: center; gap: 120px; padding: 20px 0 40px; border-bottom: 1px solid #f0f0f0;}
         nav a { text-decoration: none; color: #888; font-size: 1.0rem; transition: 0.3s; cursor: pointer;}
         nav a:hover { color: #333; }
+        nav a.nav-active { color: #222; font-weight: 700; }
 
         /* Page switching */
         .page { display: none; }
@@ -133,6 +134,7 @@
     <!-- Level Design Page -->
     <div id="page-leveldesign" class="page">
     <div class="container" style="padding: 50px 40px;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; color: #1a3a5a; margin: 0 0 40px 0; border-bottom: 1px dotted #ddd; padding-bottom: 15px;">Level Design</h2>
 
         <!-- Cursed Crown -->
         <div style="margin-bottom: 60px;">
@@ -197,6 +199,9 @@
         function showPage(page) {
             document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
             document.getElementById('page-' + page).classList.add('active');
+            document.querySelectorAll('nav a').forEach(a => a.classList.remove('nav-active'));
+            const map = { home: 0, leveldesign: 1, gamedesign: 2, vfx: 3, award: 4 };
+            document.querySelectorAll('nav a')[map[page]]?.classList.add('nav-active');
             window.scrollTo(0, 0);
         }
     </script>
