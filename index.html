@@ -16,19 +16,22 @@
         header p { font-size: 0.9rem; letter-spacing: 2.3px; color: #666; text-transform: none;}
 
         /* Navigation */
-        nav { background-color: #f9f9f9; display: flex; justify-content: center; gap: 100px; padding: 20px 0 50px; border-bottom: 1px solid #f0f0f0; border-bottom: 1px solid #f0f0f0;}
-        nav a { text-decoration: none; color: #888; font-size: 1.0rem; transition: 0.3s;}
+        nav { background-color: #f9f9f9; display: flex; justify-content: center; gap: 100px; padding: 20px 0 50px; border-bottom: 1px solid #f0f0f0;}
+        nav a { text-decoration: none; color: #888; font-size: 1.0rem; transition: 0.3s; cursor: pointer;}
         nav a:hover { color: #333; }
 
-        /* Hero Section (Hello!) */
+        /* Page switching */
+        .page { display: none; }
+        .page.active { display: block; }
+
+        /* Hero Section */
         .hero { display: flex; align-items: center; gap: 50px; margin-bottom: 40px; }
         .hero-text { flex: 1; }
         .hero-text h2 { font-family: 'Playfair Display', serif; font-size: 3.5rem; color: #1a3a5a; margin: 0 0 20px 0; }
         .hero-text h3 { font-size: 1.23rem; font-weight: 400; margin-bottom: 10px; }
         .hero-text p { font-size: 1.06rem; color: #666; margin: 0; }
-        .btn-about { display: inline-block; background: #b06b6b; color: white; padding: 10px 60px; text-decoration: none; font-size: 0.8rem; margin-left: 0; margin-top: 25px; text-align: center;}
-        .btn-about:hover { background: #9a5a5a; /* 鼠标悬停时颜色稍微变深 */}
-        
+        .btn-about { display: inline-block; background: #b06b6b; color: white; padding: 10px 60px; text-decoration: none; font-size: 0.8rem; margin-left: 0; margin-top: 25px; text-align: center; cursor: pointer;}
+        .btn-about:hover { background: #9a5a5a; }
         .hero-image { flex: 1; }
         .hero-image img { width: 100%; height: 350px; object-fit: cover; box-shadow: 15px 15px 0 #f4f4f4; margin-top: 40px;}
 
@@ -36,17 +39,16 @@
         .section-title { font-family: 'Playfair Display', serif; font-size: 2.25rem; margin-top: 20px; margin-bottom: 25px; border-top: 1px dotted #ddd; padding-top: 15px; }
         .project-link-wrap { text-align: center; margin-bottom: 30px; }
         .project-link { color: #cbb35a; font-size: 1.875rem; font-weight: bold; text-decoration: underline; text-underline-offset: 8px; }
-
-        /* 精准网格排版 */
         .image-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 15px; margin-bottom: 15px; }
         .image-grid-bottom { display: grid; grid-template-columns: 2fr 1fr; gap: 15px; margin-bottom: 40px; }
-        
-        /* 统一控制所有作品图高度，防止图片过大 */
         .grid-img { width: 100%; height: 400px; object-fit: cover; display: block; background: #eee; }
-
-        /* 项目描述 */
         .project-info { max-width: 1000px; margin: 0 auto; font-size: 1.25rem; color: #555; }
         .highlight-yellow { color: #cbb35a; font-weight: bold; font-size: 1.25rem;}
+
+        /* About Page */
+        .about-content { max-width: 700px; margin: 0 auto; padding: 60px 40px; }
+        .about-content h2 { font-family: 'Playfair Display', serif; font-size: 2.5rem; color: #5b9bd5; text-align: center; margin-bottom: 40px; }
+        .about-content p { font-size: 1.05rem; line-height: 1.8; margin-bottom: 20px; color: #333; }
 
         /* Footer */
         .footer { text-align: center; padding: 80px 0 40px; border-top: 1px solid #f9f9f9; }
@@ -54,11 +56,11 @@
         .social-links a:hover { color: #cbb35a; }
         .copyright { font-size: 0.7rem; color: #aaa; margin-top: 15px; letter-spacing: 1px; }
 
-        /* 手机端适配 */
         @media (max-width: 768px) {
             .hero { flex-direction: column; text-align: center; }
             .image-grid, .image-grid-bottom { grid-template-columns: 1fr; }
             .grid-img { height: 250px; }
+            nav { gap: 30px; }
         }
     </style>
 </head>
@@ -70,47 +72,61 @@
     </header>
 
     <nav>
-        <a href="#">About</a>
+        <a onclick="showPage('home')">About</a>
         <a href="#">Level Design</a>
         <a href="#">Game Design</a>
         <a href="#">VFX Study</a>
         <a href="#">Award</a>
     </nav>
 
-    <div class="container">
-        <section class="hero">
-            <div class="hero-text">
-                <h2>Hello!</h2>
-                <h3>My name is Yicheng Lu</h3>
-                <p>Game Designer / Level Designer / Technical Designer</p>
-                <p>VFX Artist / Programmer</p>
-                <a href="about.html" class="btn-about">About Me</a>
+    <!-- Home Page -->
+    <div id="page-home" class="page active">
+        <div class="container">
+            <section class="hero">
+                <div class="hero-text">
+                    <h2>Hello!</h2>
+                    <h3>My name is Yicheng Lu</h3>
+                    <p>Game Designer / Level Designer / Technical Designer</p>
+                    <p>VFX Artist / Programmer</p>
+                    <a class="btn-about" onclick="showPage('about')">About Me</a>
+                </div>
+                <div class="hero-image">
+                    <img src="images/MainPage/myself.jpg" alt="Profile Image">
+                </div>
+            </section>
+
+            <h2 class="section-title">Latest Project</h2>
+            
+            <div class="project-link-wrap">
+                <a href="#" class="project-link">Cursed Crown LD <i class="fa-solid fa-link" style="font-size: 1.25rem;"></i></a>
             </div>
-            <div class="hero-image">
-                <img src="images/MainPage/myself.jpg" alt="Profile Image">
+
+            <div class="image-grid">
+                <img src="images/MainPage/GDC Best In Play.png" class="grid-img" alt="GDC">
+                <img src="images/MainPage/menuscreen.png" class="grid-img" alt="Game Start Screen">
             </div>
-        </section>
 
-        <h2 class="section-title">Latest Project</h2>
-        
-        <div class="project-link-wrap">
-            <a href="#" class="project-link">Cursed Crown LD <i class="fa-solid fa-link" style="font-size: 1.25rem;"></i></a>
+            <div class="image-grid-bottom">
+                <img src="images/MainPage/Verdis_showcase.png" class="grid-img" alt="Verdis Environment">
+                <img src="images/MainPage/ReplayableLevel_showcase.png" class="grid-img" alt="Game Combat">
+            </div>
+
+            <div class="project-info">
+                <p><span class="highlight-yellow">Cursed Crown</span> is the an anime-style ARPG where your journey is shaped by personalized AI companion and an emotionally resonant, infinitely replayable experience.. Also, invites players to slow down, savor meaningful connections, and forge their own path. Whether seeking thrilling combat, heartfelt bonds, or quiet moments of reflection, every player's experience is unique.</p>
+                <p><span class="highlight-yellow">Genre:</span> ARPG, AI</p>
+                <p><span class="highlight-yellow">Contributions:</span> Served as the Lead Level Designer on the team while also contributing to gameplay design. Responsibilities included <span class="highlight-yellow">designing all in-game levels</span>, developing level-specific combat mechanics, and programming enemy behavior logic. Level flow was crafted to support both single-player and multiplayer experiences. Created <span class="highlight-yellow">modular assets</span> for procedural generating function in the levels.</p>
+            </div>
         </div>
+    </div>
 
-        <div class="image-grid">
-            <img src="images/MainPage/GDC Best In Play.png" class="grid-img" alt="GDC">
-            <img src="images/MainPage/menuscreen.png" class="grid-img" alt="Game Start Screen">
-        </div>
-
-        <div class="image-grid-bottom">
-            <img src="images/MainPage/Verdis_showcase.png" class="grid-img" alt="Verdis Environment">
-            <img src="images/MainPage/ReplayableLevel_showcase.png" class="grid-img" alt="Game Combat">
-        </div>
-
-        <div class="project-info">
-            <p><span class="highlight-yellow">Cursed Crown</span> is the an anime-style ARPG where your journey is shaped by personalized AI companion and an emotionally resonant, infinitely replayable experience.. Also, invites players to slow down, savor meaningful connections, and forge their own path. Whether seeking thrilling combat, heartfelt bonds, or quiet moments of reflection, every player’s experience is unique.</p>
-            <p><span class="highlight-yellow">Genre:</span> ARPG, AI</p>
-            <p><span class="highlight-yellow">Contributions:</span> Served as the Lead Level Designer on the team while also contributing to gameplay design. Responsibilities included <span class="highlight-yellow">designing all in-game levels</span>, developing level-specific combat mechanics, and programming enemy behavior logic. Level flow was crafted to support both single-player and multiplayer experiences. Created <span class="highlight-yellow">modular assets</span> for procedural generating function in the levels.</p>
+    <!-- About Page -->
+    <div id="page-about" class="page">
+        <div class="about-content">
+            <h2>About Me</h2>
+            <p>Hi there! I'm Yicheng Lu, a <strong>game designer</strong> specializing in <strong>level design</strong>, <strong>technical design</strong>, and overall game design. I graduated with a Master's degree in Entertainment Technology from Carnegie Mellon University, where I've had the chance to develop my skills and expertise in game development.</p>
+            <p>I've worked on <strong>several game development projects and an indie game studio.</strong> My experience has helped me build a strong foundation in game design and development. I have a keen eye for detail and a deep understanding of the technical aspects of game development.</p>
+            <p>My portfolio showcases some of the projects I've worked on and highlights my skills in creating immersive and engaging <strong>game experiences</strong>.</p>
+            <p>Thank you for taking the time to view my work. I'm excited to explore potential opportunities and discuss my skills and expertise with you.</p>
         </div>
     </div>
 
@@ -124,6 +140,14 @@
             © 2021 by Yicheng Lu.
         </div>
     </footer>
+
+    <script>
+        function showPage(page) {
+            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+            document.getElementById('page-' + page).classList.add('active');
+            window.scrollTo(0, 0);
+        }
+    </script>
 
 </body>
 </html>
