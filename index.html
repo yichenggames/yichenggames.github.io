@@ -203,7 +203,23 @@
             const map = { home: 0, leveldesign: 1, gamedesign: 2, vfx: 3, award: 4 };
             document.querySelectorAll('nav a')[map[page]]?.classList.add('nav-active');
             window.scrollTo(0, 0);
+
+            // Update website link
+            const urlMap = { home: '/', leveldesign: '/level-design', about: '/about', gamedesign: '/game-design', vfx: '/vfx', award: '/award' };
+            history.pushState({ page }, '', urlMap[page] || '/');
         }
+
+        // Browser forward & backward
+        window.addEventListener('popstate', (e) => {
+            if (e.state?.page) showPage(e.state.page);
+        });
+
+        // When page loading, read the current website link
+        window.addEventListener('DOMContentLoaded', () => {
+            const urlMap = { '/level-design': 'leveldesign', '/about': 'about', '/game-design': 'gamedesign', '/vfx': 'vfx', '/award': 'award' };
+            const page = urlMap[location.pathname] || 'home';
+            showPage(page);
+        });
     </script>
 
 </body>
