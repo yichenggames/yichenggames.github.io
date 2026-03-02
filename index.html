@@ -206,7 +206,8 @@
 
             // Update website link
             const urlMap = { home: '', leveldesign: 'level-design', about: 'about_me', gamedesign: 'game-design', vfx: 'vfx', award: 'award' };
-            history.pushState({ page }, '', '#' + (urlMap[page] || ''));
+            const slug = urlMap[page] || '';
+            history.pushState({ page }, '', slug ? '#' + slug : location.pathname);
         }
 
         // Browser forward & backward
