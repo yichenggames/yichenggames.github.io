@@ -205,7 +205,7 @@
             window.scrollTo(0, 0);
 
             // Update website link
-            const urlMap = { home: '/', leveldesign: '/level-design', about: '/about', gamedesign: '/game-design', vfx: '/vfx', award: '/award' };
+            const urlMap = { home: '/', leveldesign: '/level-design', about: '/about_me', gamedesign: '/game-design', vfx: '/vfx', award: '/award' };
             history.pushState({ page }, '', urlMap[page] || '/');
         }
 
@@ -216,7 +216,7 @@
 
         // When page loading, read the current website link
         window.addEventListener('DOMContentLoaded', () => {
-            const urlMap = { '/level-design': 'leveldesign', '/about': 'about', '/game-design': 'gamedesign', '/vfx': 'vfx', '/award': 'award' };
+            const urlMap = { '/level-design': 'leveldesign', '/about_me': 'about', '/game-design': 'gamedesign', '/vfx': 'vfx', '/award': 'award' };
             const page = urlMap[location.pathname] || 'home';
             showPage(page);
         });
