@@ -21,8 +21,8 @@
         .project-header { text-align: center; padding: 40px 0 30px; border-bottom: 1px dotted #ddd; margin-bottom: 40px; }
         .project-header h1 { font-size: 2.8rem; font-weight: 700; color: #1a3a5a; margin: 0; }
         .project-header p { font-size: 0.85rem; color: #888; margin-top: 8px; }
-        .section-title { font-size: 1.8rem; font-weight: 700; color: #5b9bd5; margin: 40px 0 10px; }
-        .sub-title { font-size: 1rem; font-weight: 700; color: #5b9bd5; margin: 20px 0 6px; }
+        .section-title { font-size: 1.8rem; font-weight: 700; color: #8b1a1a; margin: 40px 0 10px; }
+        .sub-title { font-size: 1rem; font-weight: 700; color: #8b1a1a; margin: 20px 0 6px; }
         .content-text { font-size: 1.05rem; line-height: 1.8; color: #333; margin-bottom: 16px; }
         .caption { font-size: 0.85rem; color: #888; margin: 6px 0 20px; }
         .before-after { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 24px; }
@@ -66,7 +66,7 @@
     </nav>
 
     <div class="container">
-        <a href="index.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Back to Level Design</a>
+        <a href="index.html#level-design" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Back to Level Design</a>
 
         <div class="project-header">
             <h1>Old Temple</h1>
@@ -80,50 +80,70 @@
         <p class="content-text">Your objective is to recover 8 Spirit Pieces, the key to unlocking the temple's ultimate mechanism, hidden within the temple's hall on the first-floor.</p>
         <p class="sub-title">Story:</p>
         <p class="content-text">You are an old king of this ancient temple. Once upon a day, a high-tech enemy of the modern era invaded your temple, subjecting you to inhumane treatment and locked you in the prison. After enduring excruciating torment, you died in suffering. Now, as a soul, you need to return to the temple stealthy or break in through the front gate, finding out the enigmatic trigger (mission).</p>
-        <p class="content-text">The toolkit used is called <strong>Level Up Toolkit</strong>. <a href="https://projects.etc.cmu.edu/level-up/" target="_blank" style="color: #5b9bd5;">Link to toolkit</a></p>
+        <p class="content-text">The toolkit used is called <strong>Level Up Toolkit</strong>. <a href="https://projects.etc.cmu.edu/level-up/" target="_blank" style="color: #8b1a1a;">Link to toolkit</a></p>
+        <p class="content-text">Here is the download link of the whole experience (Only support for Windows now):
+            <a href="Level Design/Old Temple/Assets/OldTemple_final.zip" download style="display: inline-block; background: #8b1a1a; color: white; padding: 8px 20px; text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; font-weight: 700; margin-left: 8px;">DOWNLOAD</a>
+        </p>
 
         <!-- Gameplay Demo -->
         <h2 class="section-title">Gameplay Demo</h2>
         <p class="content-text">Because the level has multiple routes (choices). Thus, in the demo, I only show one of the routes to pass the level.</p>
         <video controls style="width: 100%; background: #000; margin-bottom: 40px;">
-            <source src="Videos/old_temple_demo.mp4" type="video/mp4">
+            <source src="Level Design/Old Temple/Assets/Old Temple Demo.mp4" type="video/mp4">
         </video>
 
         <!-- Paper Design -->
-        <h2 class="section-title">Paper Design</h2>
-        <div class="carousel" id="carousel-paperdesign">
+        <h2 class="section-title">Paper Design & Flow</h2>
+        <p class="sub-title">Game Flow</p>
+        <img src="Level Design/Old Temple/Assets/Paper Design_GameFlow.png" style="width: 100%; object-fit: contain; background: #f5f5f5;" alt="">
+
+        <p class="sub-title">The WatchTower</p>
+        <div class="carousel" id="carousel-pd-watchtower">
             <div class="carousel-track">
-                <img src="images/Old Temple/Paper Design_1.png" alt="">
-                <img src="images/Old Temple/Paper Design_2.png" alt="">
-                <img src="images/Old Temple/Paper Design_3.png" alt="">
-                <img src="images/Old Temple/Paper Design_4.png" alt="">
-                <img src="images/Old Temple/Paper Design_5.png" alt="">
-                <img src="images/Old Temple/Paper Design_6.png" alt="">
-                <img src="images/Old Temple/Paper Design_7.png" alt="">
-                <img src="images/Old Temple/Paper Design_8.png" alt="">
-                <img src="images/Old Temple/Paper Design_9.png" alt="">
-                <img src="images/Old Temple/Paper Design_10.png" alt="">
-                <img src="images/Old Temple/Paper Design_11.png" alt="">
-                <img src="images/Old Temple/Paper Design_12.png" alt="">
-                <img src="images/Old Temple/Paper Design_13.png" alt="">
-                <img src="images/Old Temple/Paper Design_14.png" alt="">
-                <img src="images/Old Temple/Paper Design_15.png" alt="">
+                <img src="Level Design/Old Temple/Assets/Paper Design_4.png" alt="">
+                <img src="Level Design/Old Temple/Assets/Paper Design_5.png" alt="">
+                <img src="Level Design/Old Temple/Assets/Paper Design_6.png" alt="">
+                <img src="Level Design/Old Temple/Assets/Paper Design_7.png" alt="">
             </div>
-            <button class="carousel-btn prev" onclick="moveCarousel('carousel-paperdesign', -1)">&#8249;</button>
-            <button class="carousel-btn next" onclick="moveCarousel('carousel-paperdesign', 1)">&#8250;</button>
-            <div class="carousel-dots" id="dots-carousel-paperdesign"></div>
+            <button class="carousel-btn prev" onclick="moveCarousel('carousel-pd-watchtower', -1)">&#8249;</button>
+            <button class="carousel-btn next" onclick="moveCarousel('carousel-pd-watchtower', 1)">&#8250;</button>
+            <div class="carousel-dots" id="dots-carousel-pd-watchtower"></div>
+        </div>
+
+        <p class="sub-title">The Temple</p>
+        <div class="carousel" id="carousel-pd-temple">
+            <div class="carousel-track">
+                <img src="Level Design/Old Temple/Assets/Paper Design_9.png" alt="">
+                <img src="Level Design/Old Temple/Assets/Paper Design_10.png" alt="">
+                <img src="Level Design/Old Temple/Assets/Paper Design_11.png" alt="">
+                <img src="Level Design/Old Temple/Assets/Paper Design_12.png" alt="">
+            </div>
+            <button class="carousel-btn prev" onclick="moveCarousel('carousel-pd-temple', -1)">&#8249;</button>
+            <button class="carousel-btn next" onclick="moveCarousel('carousel-pd-temple', 1)">&#8250;</button>
+            <div class="carousel-dots" id="dots-carousel-pd-temple"></div>
+        </div>
+
+        <p class="sub-title">The Level Overview</p>
+        <div class="carousel" id="carousel-pd-overview">
+            <div class="carousel-track">
+                <img src="Level Design/Old Temple/Assets/Paper Design_14.png" alt="">
+                <img src="Level Design/Old Temple/Assets/Paper Design_15.png" alt="">
+            </div>
+            <button class="carousel-btn prev" onclick="moveCarousel('carousel-pd-overview', -1)">&#8249;</button>
+            <button class="carousel-btn next" onclick="moveCarousel('carousel-pd-overview', 1)">&#8250;</button>
+            <div class="carousel-dots" id="dots-carousel-pd-overview"></div>
         </div>
 
         <!-- Mood Board / Blockout -->
         <h2 class="section-title">Mood Board / Blockout Massing</h2>
         <div class="carousel" id="carousel-moodboard">
             <div class="carousel-track">
-                <img src="images/Old Temple/moodboard_1.jpg" alt="">
-                <img src="images/Old Temple/moodboard_2.jpg" alt="">
-                <img src="images/Old Temple/moodboard_3.jpg" alt="">
-                <img src="images/Old Temple/moodboard_4.jpg" alt="">
-                <img src="images/Old Temple/moodboard_5.jpg" alt="">
-                <img src="images/Old Temple/moodboard_6.jpg" alt="">
+                <img src="Level Design/Old Temple/Assets/moodboard_1.jpg" alt="">
+                <img src="Level Design/Old Temple/Assets/moodboard_2.jpg" alt="">
+                <img src="Level Design/Old Temple/Assets/moodboard_3.jpg" alt="">
+                <img src="Level Design/Old Temple/Assets/moodboard_4.jpg" alt="">
+                <img src="Level Design/Old Temple/Assets/moodboard_5.jpg" alt="">
+                <img src="Level Design/Old Temple/Assets/moodboard_6.jpg" alt="">
             </div>
             <button class="carousel-btn prev" onclick="moveCarousel('carousel-moodboard', -1)">&#8249;</button>
             <button class="carousel-btn next" onclick="moveCarousel('carousel-moodboard', 1)">&#8250;</button>
@@ -137,8 +157,8 @@
         <p class="sub-title">Staff</p>
         <p class="content-text">The most important mechanic I added to this level is the Staff. The Staff can trigger the Conveying hanger and combat with the enemy.</p>
         <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 12px; margin-bottom: 8px;">
-            <img src="images/Old Temple/staff_slide.png" style="width: 100%; object-fit: cover;" alt="">
-            <img src="images/Old Temple/staff_combat.png" style="width: 100%; object-fit: cover;" alt="">
+            <img src="Level Design/Old Temple/Assets/Use_Staff_To_Slide.png" style="width: 100%; object-fit: cover;" alt="">
+            <img src="Level Design/Old Temple/Assets/Use_Staff_To_Combat.png" style="width: 100%; object-fit: cover;" alt="">
         </div>
         <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 12px; margin-bottom: 24px;">
             <p class="caption">Use staff to slide</p>
@@ -147,27 +167,17 @@
 
         <p class="sub-title">Enemy</p>
         <p class="content-text">I set few enemies patrolling by given routes. Players can choose to combat with these enemies by using the staff or dodge from them stealthy.</p>
-        <img src="images/Old Temple/enemy_patrol.gif" style="width: 100%; margin-bottom: 8px;" alt="">
+        <img src="Level Design/Old Temple/Assets/Example of Enemies.gif" style="width: 100%; margin-bottom: 8px;" alt="">
         <p class="caption">Example of enemies</p>
 
         <p class="sub-title">Some other triggers</p>
         <p class="content-text">Here are some other triggers I added in the level. In the jump puzzle area, I add Security Camera (damage zone), conveyor belt and movable platform.</p>
-        <img src="images/Old Temple/jump_puzzle.gif" style="width: 100%; margin-bottom: 8px;" alt="">
+        <img src="Level Design/Old Temple/Assets/Jump Puzzle Area.gif" style="width: 100%; margin-bottom: 8px;" alt="">
         <p class="caption">Jump puzzle area</p>
 
         <!-- Playtest / Feedback -->
         <h2 class="section-title">Playtest / Feedback</h2>
-        <div class="carousel" id="carousel-playtest">
-            <div class="carousel-track">
-                <img src="images/Old Temple/playtest_1.png" alt="">
-                <img src="images/Old Temple/playtest_2.png" alt="">
-                <img src="images/Old Temple/playtest_3.png" alt="">
-                <img src="images/Old Temple/playtest_4.png" alt="">
-            </div>
-            <button class="carousel-btn prev" onclick="moveCarousel('carousel-playtest', -1)">&#8249;</button>
-            <button class="carousel-btn next" onclick="moveCarousel('carousel-playtest', 1)">&#8250;</button>
-            <div class="carousel-dots" id="dots-carousel-playtest"></div>
-        </div>
+        <img src="Level Design/Old Temple/Assets/playtest report.png" style="width: 100%; object-fit: contain; background: #f5f5f5;" alt="">
 
         <!-- Level Iterations -->
         <h2 class="section-title">Level Iterations</h2>
@@ -177,21 +187,21 @@
         <p class="content-text">For example, when players slide into this room, there will be an enemy patrolling, but players need a safe place for them to observe.</p>
         <div class="before-after">
             <div>
-                <img src="images/Old Temple/before_temple.png" alt="">
+                <img src="Level Design/Old Temple/Assets/before_2nd_FloorInTemple.png" alt="">
                 <p class="before-after-label">Before: 2nd floor room in Temple</p>
             </div>
             <div>
-                <img src="images/Old Temple/after_temple.png" alt="">
+                <img src="Level Design/Old Temple/Assets/after_2nd_FloorInTemple.png" alt="">
                 <p class="before-after-label">After: 2nd floor room in Temple</p>
             </div>
         </div>
         <div class="before-after">
             <div>
-                <img src="images/Old Temple/before_tower.png" alt="">
+                <img src="Level Design/Old Temple/Assets/before_2nd_FloorInTower.png" alt="">
                 <p class="before-after-label">Before: 2nd floor room in Tower</p>
             </div>
             <div>
-                <img src="images/Old Temple/after_tower.png" alt="">
+                <img src="Level Design/Old Temple/Assets/after_2nd_FloorInTower.png" alt="">
                 <p class="before-after-label">After: 2nd floor room in Tower</p>
             </div>
         </div>
@@ -200,11 +210,11 @@
         <p class="content-text">For example, the platform in 2nd floor room of Temple, some players cannot jump on this platform because there is a fence around the platform. Thus, I rotate the platform.</p>
         <div class="before-after">
             <div>
-                <img src="images/Old Temple/platform_before.png" alt="">
+                <img src="Level Design/Old Temple/Assets/platform_before.png" alt="">
                 <p class="before-after-label">Before: Platform</p>
             </div>
             <div>
-                <img src="images/Old Temple/platform_after.png" alt="">
+                <img src="Level Design/Old Temple/Assets/platform_after.png" alt="">
                 <p class="before-after-label">After: Platform</p>
             </div>
         </div>

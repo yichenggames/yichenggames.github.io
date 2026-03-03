@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dishonored 2223 | Yicheng Lu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; margin: 0; padding: 0; color: #333; line-height: 1.6; background: #fff; font-weight: 500; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
+        header { text-align: center; padding: 40px 0 10px; background-color: #f9f9f9; }
+        header h1 { font-size: 2rem; letter-spacing: 5px; margin: 0; font-weight: 700; }
+        header p { font-size: 0.9rem; letter-spacing: 8px; color: #666; margin-top: 4px; }
+        nav { background-color: #f9f9f9; display: flex; justify-content: center; gap: 160px; padding: 20px 0 40px; border-bottom: 1px solid #f0f0f0; }
+        nav a { text-decoration: none; color: #888; font-size: 1.0rem; transition: 0.3s; }
+        nav a:hover { color: #333; }
+        .back-btn { display: inline-block; margin: 30px 0 10px; color: #888; font-size: 0.9rem; text-decoration: none; }
+        .back-btn:hover { color: #333; }
+        .back-btn i { margin-right: 6px; }
+        .project-header { text-align: center; padding: 40px 0 30px; border-bottom: 1px dotted #ddd; margin-bottom: 40px; }
+        .project-header h1 { font-size: 2.8rem; font-weight: 700; color: #1a3a5a; margin: 0; }
+        .project-header p { font-size: 0.85rem; color: #888; margin-top: 8px; }
+        .section-title { font-size: 1.8rem; font-weight: 700; color: #8b1a1a; margin: 40px 0 10px; }
+        .sub-title { font-size: 1rem; font-weight: 700; color: #8b1a1a; margin: 20px 0 6px; }
+        .content-text { font-size: 1.05rem; line-height: 1.8; color: #333; margin-bottom: 16px; }
+        .caption { font-size: 0.85rem; color: #888; margin: 6px 0 20px; }
+        .before-after { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 24px; }
+        .before-after img { width: 100%; object-fit: cover; }
+        .before-after-label { font-size: 0.85rem; color: #888; text-align: center; margin-top: 4px; }
+        /* Carousel */
+        .carousel { position: relative; overflow: hidden; margin-bottom: 12px; }
+        .carousel-track { display: flex; transition: transform 0.3s ease; }
+        .carousel-track img { min-width: 100%; height: 600px; object-fit: contain; background: #f5f5f5; }
+        .carousel-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.4); color: white; border: none; padding: 10px 16px; cursor: pointer; font-size: 1.2rem; z-index: 10; }
+        .carousel-btn.prev { left: 8px; }
+        .carousel-btn.next { right: 8px; }
+        .carousel-dots { text-align: center; margin-top: 8px; }
+        .carousel-dots span { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #ccc; margin: 0 4px; cursor: pointer; }
+        .carousel-dots span.active { background: #555; }
+        /* Lightbox */
+        .lightbox { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 1000; justify-content: center; align-items: center; cursor: pointer; }
+        .lightbox.active { display: flex; }
+        .lightbox img { max-width: 90%; max-height: 90vh; object-fit: contain; }
+        .back-to-top { display: block; text-align: center; margin: 20px auto 40px; color: #888; font-size: 0.9rem; text-decoration: none; cursor: pointer; }
+        .back-to-top:hover { color: #333; }
+        .footer { text-align: center; padding: 60px 0 30px; border-top: 1px solid #f0f0f0; margin-top: 20px; }
+        .social-links a { color: #333; margin: 0 12px; font-size: 1.2rem; transition: 0.3s; }
+        .social-links a:hover { color: #cbb35a; }
+        .copyright { font-size: 0.7rem; color: #aaa; margin-top: 15px; letter-spacing: 1px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Yicheng Lu</h1>
+        <p>Personal Portfolio</p>
+    </header>
+
+    <nav>
+        <a href="index.html">About</a>
+        <a href="index.html#level-design">Level Design</a>
+        <a href="index.html#game-design">Game Design</a>
+        <a href="index.html#vfx">VFX Study</a>
+        <a href="index.html#award">Award</a>
+    </nav>
+
+    <div class="container">
+        <a href="index.html#level-design" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Back to Level Design</a>
+
+        <div class="project-header">
+            <h1>Dishonored 2223</h1>
+            <p>Escape from the Cyber Prison · 09.2023 - 10.2023</p>
+        </div>
+
+        <!-- Description -->
+        <h2 class="section-title">Description</h2>
+        <p class="content-text">Dishonored 2223 is a level design project built in Unreal 5.1. The goal of this project is to recreate the Prison Escape experience from the original game (Dishonored 1) in a world where human guards have been replaced by cameras and machines.</p>
+        <p class="sub-title">Story:</p>
+        <p class="content-text">A sword is no longer useful here, but the player has a powerful Staff that lets her leap over gaps and "climb" up high walls.</p>
+        <p class="content-text">The platform used is Unreal 5.1 and the toolkit is called <strong>Level Up Toolkit</strong>. <a href="https://projects.etc.cmu.edu/level-up/" target="_blank" style="color: #8b1a1a;">Link to toolkit</a></p>
+        <p class="content-text">Here is the download link of the level (Only supports Windows):
+            <a href="Level Design/Dishonored 2223/Assets/Dishonored 2223.zip" download style="display: inline-block; background: #8b1a1a; color: white; padding: 8px 20px; text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; font-weight: 700; margin-left: 8px;">DOWNLOAD</a>
+        </p>
+
+        <!-- Gameplay Demo -->
+        <h2 class="section-title">Gameplay Demo</h2>
+        <video controls style="width: 100%; background: #000; margin-bottom: 40px;">
+            <source src="Level Design/Dishonored 2223/Assets/Dishonored 2223 Demo.mp4" type="video/mp4">
+        </video>
+
+        <!-- Paper Design -->
+        <h2 class="section-title">Paper Design / Level Explanation</h2>
+        <div class="carousel" id="carousel-paperdesign">
+            <div class="carousel-track">
+                <img src="Level Design/Dishonored 2223/Assets/Paper Design_1.png" alt="">
+                <img src="Level Design/Dishonored 2223/Assets/Paper Design_2.png" alt="">
+                <img src="Level Design/Dishonored 2223/Assets/Paper Design_3.png" alt="">
+                <img src="Level Design/Dishonored 2223/Assets/Paper Design_4.png" alt="">
+                <img src="Level Design/Dishonored 2223/Assets/Paper Design_5.png" alt="">
+                <img src="Level Design/Dishonored 2223/Assets/Paper Design_6.png" alt="">
+                <img src="Level Design/Dishonored 2223/Assets/Paper Design_7.png" alt="">
+                <img src="Level Design/Dishonored 2223/Assets/Paper Design_8.png" alt="">
+            </div>
+            <button class="carousel-btn prev" onclick="moveCarousel('carousel-paperdesign', -1)">&#8249;</button>
+            <button class="carousel-btn next" onclick="moveCarousel('carousel-paperdesign', 1)">&#8250;</button>
+            <div class="carousel-dots" id="dots-carousel-paperdesign"></div>
+        </div>
+
+        <!-- Game Mechanics -->
+        <h2 class="section-title">Game Mechanics</h2>
+
+        <p class="sub-title">The "POLE" (Affordance)</p>
+        <p class="content-text">A pole can let players do special movement: such as slide or hang on the hooks. Players can use these 2 skills to help them pass some specific terrain or some traps.</p>
+        <video controls style="width: 100%; background: #000; margin-bottom: 8px;">
+            <source src="Level Design/Dishonored 2223/Assets/Game Mechanics/the POLE.mp4" type="video/mp4">
+        </video>
+        <p class="caption">Tutorial level: learn how to use the pole.</p>
+
+        <p class="sub-title">Breakable Structures / Walls</p>
+        <p class="content-text">In the level, there will be some breakable structures or walls. I use light color to highlight these structures so players are aware of them at key points. The green cube (affordance) in the scene can also break the walls.</p>
+        <video controls style="width: 100%; background: #000; margin-bottom: 8px;">
+            <source src="Level Design/Dishonored 2223/Assets/Game Mechanics/breakable wall.mp4" type="video/mp4">
+        </video>
+        <p class="caption">Red color walls indicate the breakable structure.</p>
+
+        <p class="sub-title">Damage Zone</p>
+        <p class="content-text">In the level, there are many different kinds of damage zones: Cameras, Damage floor, Traps. All of these damage zones will reduce the player's health. If health drops to 0, the player will die.</p>
+        <video controls style="width: 100%; background: #000; margin-bottom: 8px;">
+            <source src="Level Design/Dishonored 2223/Assets/Game Mechanics/damage zone.mp4" type="video/mp4">
+        </video>
+        <p class="caption">Cameras, Dead Trap, Damage Floor.</p>
+
+        <p class="sub-title">Other Triggers</p>
+        <p class="content-text">There are other interactable triggers in the level:</p>
+        <ul style="font-size: 1.05rem; line-height: 2; color: #333; padding-left: 24px; margin-bottom: 24px;">
+            <li><strong>Buttons:</strong> used to open all the doors in the level. Sometimes, players need to find the hidden button for the doors in the map.</li>
+            <li><strong>Recovery Zone:</strong> players can get healing at this zone. Indicated by green colors.</li>
+            <li><strong>Portal:</strong> enter one door and exit from another.</li>
+        </ul>
+        <img src="Level Design/Dishonored 2223/Assets/Game Mechanics/Other Triggers/itration_button_wire.png" style="width: 100%; object-fit: contain; background: #f5f5f5; margin-bottom: 8px;" alt="">
+        <p class="caption">Button with blue wire connected to the door.</p>
+
+        <img src="Level Design/Dishonored 2223/Assets/Game Mechanics/Other Triggers/recovery zone.png" style="width: 100%; object-fit: contain; background: #f5f5f5; margin-bottom: 8px;" alt="">
+        <p class="caption">Recovery zone (green area).</p>
+        <video controls style="width: 100%; background: #000; margin-bottom: 8px;">
+            <source src="Level Design/Dishonored 2223/Assets/Game Mechanics/Other Triggers/portal.mp4" type="video/mp4">
+        </video>
+        <p class="caption">Portal example.</p>
+
+        <!-- Rough Prototype Playtest -->
+        <h2 class="section-title">Rough Prototype Playtest</h2>
+        <p class="content-text">After I built a rough prototype of my level, I invited 2 players to playtest. Here are the notes during the playtest and their feedback.</p>
+        <div class="carousel" id="carousel-playtest">
+            <div class="carousel-track">
+                <img src="Level Design/Dishonored 2223/Assets/Rough Prototype Playtest/rough prototype playtest feedback.png" alt="">
+                <img src="Level Design/Dishonored 2223/Assets/Rough Prototype Playtest/Jason notes.png" alt="">
+                <img src="Level Design/Dishonored 2223/Assets/Rough Prototype Playtest/Nay notes.png" alt="">
+            </div>
+            <button class="carousel-btn prev" onclick="moveCarousel('carousel-playtest', -1)">&#8249;</button>
+            <button class="carousel-btn next" onclick="moveCarousel('carousel-playtest', 1)">&#8250;</button>
+            <div class="carousel-dots" id="dots-carousel-playtest"></div>
+        </div>
+
+        <!-- Level Iterations -->
+        <h2 class="section-title">Level / Map Iterations</h2>
+
+        <p class="sub-title">Button / Door</p>
+        <p class="content-text">From the playtest feedback, I added blue wires to connect the buttons and the doors. Now players will understand that buttons are used to open doors in the room. The wire also acts as a leading line, guiding the player's attention through the level.</p>
+        <div class="before-after">
+            <div>
+                <img src="Level Design/Dishonored 2223/Assets/Level Iterations/Button&Door/before_iteration_button.png" alt="">
+                <p class="before-after-label">Before</p>
+            </div>
+            <div>
+                <img src="Level Design/Dishonored 2223/Assets/Level Iterations/Button&Door/after_itration_button_wire.png" alt="">
+                <p class="before-after-label">After</p>
+            </div>
+        </div>
+        <img src="Level Design/Dishonored 2223/Assets/Level Iterations/Button&Door/A button behind the breakable wall.png" style="width: 100%; object-fit: contain; margin-bottom: 8px;" alt="">
+        <p class="caption">A button behind the breakable wall.</p>
+
+        <p class="sub-title">Lighting Effect</p>
+        <p class="content-text">At some points, players could not see the breakable structure and would miss the correct path. According to the feedback, I added a spotlight and changed the color of the wall.</p>
+        <div class="before-after">
+            <div>
+                <img src="Level Design/Dishonored 2223/Assets/Level Iterations/Lighting effect/before_DarkandGrey.png" alt="">
+                <p class="before-after-label">Before: Dark and Grey</p>
+            </div>
+            <div>
+                <img src="Level Design/Dishonored 2223/Assets/Level Iterations/Lighting effect/after_More obviously and Orange color.png" alt="">
+                <p class="before-after-label">After: More obvious, Orange color</p>
+            </div>
+        </div>
+        <div class="before-after">
+            <div>
+                <img src="Level Design/Dishonored 2223/Assets/Level Iterations/Lighting effect/before_Too dark to see the path.png" alt="">
+                <p class="before-after-label">Before: Too dark to see the path</p>
+            </div>
+            <div>
+                <img src="Level Design/Dishonored 2223/Assets/Level Iterations/Lighting effect/after_Add more lights as direction.png" alt="">
+                <p class="before-after-label">After: Added more lights as direction</p>
+            </div>
+        </div>
+
+        <p class="sub-title">Landmark / Direction</p>
+        <p class="content-text">From players' feedback, I added a landmark for direction at the end of the level. This helps players know where the final destination is and makes their "mission" clearer. This position is also a vantage point where players can decide whether to continue to the building or keep exploring the map.</p>
+        <video controls style="width: 100%; background: #000; margin-bottom: 8px;">
+            <source src="Level Design/Dishonored 2223/Assets/Level Iterations/Landmark&Direction/land mark.mp4" type="video/mp4">
+        </video>
+        <p class="caption">Landmark at the end of the level, also known as <strong style="color: #000;">Vantage Point</strong>.</p>
+
+    </div>
+
+    <a class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        <i class="fa-solid fa-arrow-up"></i> Back to Top
+    </a>
+
+    <footer class="footer">
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/yicheng-lu-33885a1ba/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+        <div class="copyright">© 2021 by Yicheng Lu.</div>
+    </footer>
+
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img" src="" alt="">
+    </div>
+
+    <script>
+        function moveCarousel(id, dir) {
+            const carousel = document.getElementById(id);
+            const track = carousel.querySelector('.carousel-track');
+            const imgs = track.querySelectorAll('img');
+            let current = parseInt(track.dataset.current || 0);
+            current = (current + dir + imgs.length) % imgs.length;
+            track.dataset.current = current;
+            track.style.transform = `translateX(-${current * 100}%)`;
+            const dots = document.querySelectorAll(`#dots-${id} span`);
+            dots.forEach((d, i) => d.classList.toggle('active', i === current));
+        }
+
+        function openLightbox(src) {
+            document.getElementById('lightbox-img').src = src;
+            document.getElementById('lightbox').classList.add('active');
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.carousel').forEach(carousel => {
+                const id = carousel.id;
+                const imgs = carousel.querySelectorAll('img');
+                const dotsContainer = document.getElementById(`dots-${id}`);
+                if (!dotsContainer) return;
+                imgs.forEach((_, i) => {
+                    const dot = document.createElement('span');
+                    if (i === 0) dot.classList.add('active');
+                    dot.onclick = () => {
+                        carousel.querySelector('.carousel-track').dataset.current = i - 1;
+                        moveCarousel(id, 1);
+                    };
+                    dotsContainer.appendChild(dot);
+                });
+            });
+
+            document.querySelectorAll('.carousel-track img').forEach(img => {
+                img.style.cursor = 'zoom-in';
+                img.onclick = () => openLightbox(img.src);
+            });
+        });
+    </script>
+
+</body>
+</html>
