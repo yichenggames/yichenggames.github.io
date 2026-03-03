@@ -1,5 +1,0 @@
-Path Iteration:
-
-We playtested this pattern of paths in the game, where the pieces move from the end of the branches to the center, and we found the problem was that sometimes it was difficult for the two sides to encounter each other, and when they do encounter, they often block each other, making it too easy to either defend, attack or even cause a deadlock.
-
-To solve this issue, we drew inspiration from the contemporary game "Pachisi" and connected the branches to form loops, so when the two sides confront, it's easier to escape, reinforce, or attack with a siege. This greatly increased our diversity of strategy.

@@ -1,5 +1,0 @@
- Liubo is an ancient Chinese board game originally played from about 500 BCE to 500 CE. The rules of the game have been lost to time, but our team is attempting to reconstruct the game based on what we do know. Today you will be helping us test our digital version of the game.
-
-Demo Video below: https://youtu.be/5FE_NQ-hVzs
-
-Game Download address: https://liubolab.itch.io/liubo

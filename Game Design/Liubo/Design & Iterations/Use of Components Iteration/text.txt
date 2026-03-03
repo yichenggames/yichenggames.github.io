@@ -1,5 +1,0 @@
-Use of Components Iteration:
-
-Our remaining mechanics concern the physical components of the game and how they relate to one another. This includes rules for pieces capturing and blocking each other, as well as the use of the game’s throwing sticks.
-
-We combined our observations from these two sources into paper playtests, through which we iterated and reached our final version.

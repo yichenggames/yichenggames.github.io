@@ -1,5 +1,0 @@
-Dice/Sticks Iterations:
-
-The important part is that this method produces an uneven probability curve, while the other rolling methods produced a flat curve. This curve allows for much more interesting gameplay decisions, as players weigh the likelihood of events in the game, such as being able to evade capture or reach a nest. Playtesters of this version reported enjoying the balance of strategy and luck, whereas testers of the other versions were often frustrated by the level of randomness.
-
-​As a bonus, playtesters told us that rolling sticks gave our game an enjoyable and very unique physicality that we then worked hard to preserve in our digital game.

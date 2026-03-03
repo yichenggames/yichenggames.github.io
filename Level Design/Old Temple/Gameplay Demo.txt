@@ -1,2 +1,0 @@
-Gameplay Demo
-Because the level has multiple routes(choices). Thus, in the demo, I only show one of the routes to pass the level.

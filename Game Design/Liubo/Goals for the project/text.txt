@@ -1,4 +1,0 @@
-Goals for the project
-1. Reconstruct and playtest this “lost” ancient board game, based on available artifacts, texts, records, English/Chinese-language scholarship, consulting with experts, etc. – plus our team member’s own ideas about player experience and which version of the game seems the most fun.
-
-2. Create a digital method (a game, an app, etc.) to teach contemporary audiences how to play our proposed reconstruction of Liubo. Also convey some of the history of the game and information about how it’s been reconstructed.
