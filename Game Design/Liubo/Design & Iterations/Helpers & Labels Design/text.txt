@@ -1,0 +1,5 @@
+Helpers & Labels Design:
+
+During playtests, we found the positions and paths were too hard to remember, as it's unlike any game people are familiar with.
+
+​So, we translated the nine positions into English and marked them on the board, which helped players understand the functions of specific positions. We also added a layer showing the connections between the spaces to help players plan for their target ahead of time.

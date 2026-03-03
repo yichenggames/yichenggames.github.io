@@ -1,0 +1,7 @@
+Tutorial Design:
+
+For the Tutorial part, we split our rules into 12 sections. Each section has multiple pages information and an animation for visualize the rules.
+
+Originally, we plan to do an interactable tutorial into our digital game. Unfortunately, we are running out of time. Thus, we decided to change the tutorial style into Rule books which inspired from comic books. Even the rule book is not our original plan, it still successfully teach players how to play our game perfectly based on playtests.
+
+We also split our game features into few sections in order to design the tutorial easier and more intuitive. Here are the example of our tutorial work flow:

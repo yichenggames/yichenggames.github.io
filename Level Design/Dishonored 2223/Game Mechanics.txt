@@ -1,0 +1,17 @@
+Game Mechanics
+
+The "POLE" (Affordance)
+	A pole can let players do special movement: such as slide or hang on the hooks. Players can use these 2 skills to help them pass some specific terrain or some traps.
+
+Breakable Structures/Walls
+	In the level, there will some breakable sturctures or walls. I use light color to highlight these structures in order to players aware these breakable structures at some points. The green cube(affordance) in the scene also can break the walls.
+
+Damage Zone
+	In the level, there are many different kinds of damage zone: Cameras, Damage floor, Traps. All of these damage zones will lose players' health level, if players' health down to 0, they will die.
+
+Other Triggers
+
+	There are other interactable triggers in the level: Buttons, Recovery Zone, Portal.
+		Buttons: used to open all the doors in the level. Sometimes, players need to find the hidden button for the doors in the map.
+		Recovery Zone: players can get healing at this zone. Use green colors to indicate.
+		Portal: the door can enter in then out from the other door.

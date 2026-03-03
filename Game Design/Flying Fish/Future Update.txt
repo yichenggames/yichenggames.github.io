@@ -1,0 +1,7 @@
+Future Update
+●    Refine some details and make it a fully fleshed out game.
+●    Fix some bugs.
+●    Add more objects and polish up our level design.
+●    If possible, Add some moving obstacles to enhance the difficulty of the game level.
+
+Also, as a game designer I need always to consider the game's impact, cost and risk.

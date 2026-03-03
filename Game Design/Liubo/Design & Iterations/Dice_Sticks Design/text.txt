@@ -1,0 +1,14 @@
+Dice/Sticks Design:
+
+Finally, we had to make a decision on how to roll random numbers for our game. Our research pointed to a few alternative methods, including 4-sided throwing sticks, 2-sided throwing sticks, and an 18 sided die.
+
+We tested each of these versions first using stand-ins such as dice and coins, and later using our own reproductions. We were looking for the method that created the best balance of strategy and luck.
+
+The two-sided sticks were the stand out, because of the way they are counted.
+
+​The sticks are counted in two groups of three, differentiated by color. Each stick has two sides: an ornate rounded side that you can think of like “heads” on a coin, and a flat, plain side that you can think of as “tails.” Heads is worth 1, and tails is worth 0.
+
+For example:
+This is 2
+a roll of 2 on the red sticks and 1 on the grey sticks
+And the one special rule is that rolling all “tails” is actually worth 4 instead of 0.

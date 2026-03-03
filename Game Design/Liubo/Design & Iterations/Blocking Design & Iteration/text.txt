@@ -1,0 +1,10 @@
+Blocking Design & Iteration:
+
+This brought us back to an outstanding quote from our research that we hadn’t been able to incorporate yet:
+
+“The owl is capable because one uses the normal piece to support it.”
+
+We didn’t yet have a direct way for pieces to support one another. To solve this, we looked at one of Liubo’s related games, Pachisi.
+
+In traditional pachisi, the shell or cone shape pieces stack by nesting on top of each other. When they do so, they create a blockade that prevents all other pieces from moving through them.
+These rules were a natural fit for our game. Blockades provided a direct means for pieces to support one another, satisfying our research, and testers reported that they added a layer of defensive strategy to the game.

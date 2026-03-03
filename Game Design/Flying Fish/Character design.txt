@@ -1,0 +1,4 @@
+Character Design
+The idea of flying fish is from a fish called "mudskipper" which as shown below. I noticed that mudskipper can jump on the ground, thus I want the player can control the fish to jump and find the hat back. The reason we call the fish as "flying fish" is player can control the fish to jump really high and do the double jump. It just like the fish is flying in the air.
+
+And the final model of character is also as shown below. Our artists build this fish in the Maya.

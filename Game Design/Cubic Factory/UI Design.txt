@@ -1,0 +1,18 @@
+UI
+	Main Menu
+		Here is the Interface of the main menu.
+
+	In-game UI
+		Here is the interface which players will see during the game.
+		The UI in the top right corner displays the player's current collection of cheese and the total number of cheese in the level.
+		The UI in the top left corner is the pause menu.
+
+	Indicator
+		“Space” is the button for players to interact with any objects in the game. When the player approaches the objects that can be 			interacted with will show an indicator.
+		"F" is the button for players to interact with triggers on the map. When the player approaches the trigger, it will show an indicator
+
+	Pause Menu
+		When the pause menu is open, there are three options: "Resume Game," "Retry," and "Exit to Main Menu." Choosing "Retry" allows 			the player to replay the current level.
+
+	End Scene
+		When the game finished, here is the end scene looks like. Players can back to the start menu.

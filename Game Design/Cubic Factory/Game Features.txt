@@ -1,0 +1,23 @@
+Electricity
+	Conductive
+		While there are some electric circuits on the map, some boxes can be a conductive object to connect the electric circuit such as the iron can.
+
+	Insulation
+		If players are stuck by an electric circuit on the map, they can find some boxes to insulate the circuits thus players can pass it. Also, 			unplugging the battery can insulate the circuit too.
+
+
+Environmental items or machinery
+	Conveyor Belt
+		The conveyor belt is an automatic moving belt. Any boxes can be placed on the conveyor belt and the conveyor belt only turns on 			when the battery is charging. Conveyor belt will has indicator to show if it has power. Red arrows mean no power. Green arrows 			mean it has power and is working.
+
+	Battery
+		There will be some batteries in the level. The battery can be used to give the power of some machines such as conveyor belts.
+
+	Electric Floor
+		Some floors are electric. It will be indicated by the electric effects.
+
+	Trigger
+		Once the conveyor belt has power, player needs to interact with the trigger to turn on the conveyor belt.
+
+	Collectable Object
+		There are some cheeses for players to collect during the game. Also, the cheeses can serve as the in-game guide for players or 			indicate where players need to solve puzzles.

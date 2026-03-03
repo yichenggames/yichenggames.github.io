@@ -1,0 +1,7 @@
+Environment Design
+	Visual Occlusion
+		We utilize visual occlusion effects to enhance the visual experience of our level environments for players.
+		As shown below, we've designed certain black areas (black mist) to visually occlude elements within the level environment. The benefit of this approach is that it divides the level into distinct regions, guiding players to learn new game mechanics and fully explore each area.
+
+	The Grid
+		To help players better plan the steps needed to push each box in the level environment, we outline the edges of each grid when designing the game scene's floor. This allows players to better strategize how to use the items within the level environment to progress.

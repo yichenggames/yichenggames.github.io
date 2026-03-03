@@ -1,0 +1,11 @@
+Cubic Factory is a 2.5D box-pushing puzzle game. It is about a rat’s adventure in an automatic food factory.
+
+Goal of the game: Find the golden cheese which is hidden deep within the factory.
+
+​
+Theme: A mouse enters the food factory to find the most delicious “ Golden Cheese”.
+
+
+Story: In a world known as "Mouse Wonderland," resides a colony of cunning and agile mice. Among them, Robin, a particularly curious mouse, learns of a legendary treasure: the "Golden Cheese," rumored to be the most delectable cheese ever tasted. Eager to experience its rumored delights, Robin embarks on a daring journey to the cheese factory, where the coveted cheese is said to be kept. Upon arriving at the factory, Robin encounters a series of intricate puzzles and challenges, designed to safeguard the prized cheese. With his sharp wit and nimble reflexes, Robin must navigate through each puzzle, overcoming obstacles and outsmarting the factory's defenses to reach the Golden Cheese. Will Robin successfully solve the factory's puzzles and uncover the legendary Golden Cheese, or will he be thwarted by the factory's cunning traps?
+
+Here is the download link of the whole experience (Only support for windows): 

@@ -1,0 +1,8 @@
+Level Iterations
+Base on the feedback, I made the iterations on the level.
+
+1. Set more covers to create some safe zone.
+For example, when players slide into this room, there will be an enemy patrolling, but players need a safe place for them to observe.
+
+2. Some platforms change
+For example, the platform in 2nd floor room of Temple, some players cannot jump on this platform because there is a fence around the platform. Thus, I rotate the platform.

@@ -1,0 +1,2 @@
+Map Design
+The idea of game's map is from our game's background. We design some islands and distributed evenly on the sea. However, I need to consider the sequence of the position of the hat and because of the surface of the island is low poly, I want player feel more fun and challenge. I add bouncing features to the fish. When the flying fish land on the ground it will bounce to a direction(according to the land surface). Also, this map was build by Maya.

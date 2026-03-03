@@ -1,0 +1,7 @@
+Dungeon Level
+In Cursed Crown, the flow logic of the entire level will be designed around the game's combat mechanics. For example, since our gameplay is similar to Diablo's dungeon-crawling style, we encourage players to repeatedly enter dungeon levels to challenge varying difficulties and obtain equipment with different attributes and skills. Therefore, when designing levels, considerations must include spatial utilization and replayability, while ensuring the difficulty curve does not escalate excessively.
+Additionally, according to the game's backstory, players have a certain probability of discovering clues related to the background narrative during repeated playthroughs of the level. Collecting these clues will allow them to progress through the level. For example, upon completing Chapter 1 and its corresponding tasks, players can unlock Level 2 (featuring different dungeon themes and level designs).
+
+Verdis
+As the first major city in Cursed Crown, Verdis requires a thoughtfully designed overarching layout. The flow logic of Verdis is built around addressing the fundamental questions players encounter when first entering the game world: What is the background story and central theme of the game? What can I do and learn in Verdis? What should I do next?
+These questions will all be answered through my Verdis flow chart. As a level designer, my role is to act as a seamless "guide" for players, crafting intuitive level logic that introduces the game's premise and core themes effectively.

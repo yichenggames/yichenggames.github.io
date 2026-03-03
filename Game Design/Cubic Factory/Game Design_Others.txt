@@ -1,0 +1,16 @@
+In-Game Camera：
+The camera always remains at a fixed position, angled 50 degrees downward from above.
+Since the size of the level will be larger than the coverage area of the camera, we divide one level into several areas. Whenever the player completes the puzzle in the current area and enters the next one, the camera switches to the map of the next area, and during this transition, the character cannot be controlled. This is to prevent the player from getting disoriented during the camera switch.
+​Also, The camera can rotate 90 degrees. Players can press “Q” to turn left or “E” to turn right, rotating the camera by 90 degrees. This allows players to better observe areas on the map that are obscured by objects.
+
+Tutorial:
+The goal of tutorial level is to teach the character’s movement and understand the box functions, such as push, pull and react with the environment.
+	Set up 1-2 rooms for tutorial level
+	Learn the basic movement
+		WASD for controlling the character movement
+	Box functions
+		Push
+		Pull
+		React with the environment
+			Conductive
+			Insulation

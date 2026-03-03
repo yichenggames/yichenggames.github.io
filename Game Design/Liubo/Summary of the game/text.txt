@@ -1,0 +1,3 @@
+Summary of the game
+
+Liubo is a game about birds catching fish. Each player controls 6 pieces representing birds. These birds fly around the board in order to reach the center square, which represents a pond full of fish. Birds catch fish by crossing over or landing on this pond, and then score points by dropping the fish in the circle “Nest” spaces on the opponent’s side of the board. However, you can also score points by capturing your opponent’s birds before they reach the nests! Liubo takes between 10 to 45 minutes to play; the first player to 6 points wins!

@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Plus+Jakarta+Sans:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; margin: 0; padding: 0; color: #333; line-height: 1.6; background: #fff; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; margin: 0; padding: 0; color: #333; line-height: 1.6; background: #fff; font-weight: 500; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
         header { text-align: center; padding: 40px 0 10px; background-color: #f9f9f9; }
         header h1 { font-size: 2rem; letter-spacing: 5px; margin: 0; font-weight: 700; }
@@ -20,44 +20,292 @@
         .back-btn i { margin-right: 6px; }
         .project-title { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 2.5rem; font-weight: 700; color: #1a3a5a; margin: 10px 0 5px; }
         .project-date { font-size: 0.85rem; color: #888; margin-bottom: 30px; }
+        .project-header { text-align: center; padding: 40px 0 30px; border-bottom: 1px dotted #ddd; margin-bottom: 40px; }
+        .project-header h1 { font-size: 2.8rem; font-weight: 700; color: #1a3a5a; margin: 0; }
+        .project-header p { font-size: 0.85rem; color: #888; margin-top: 8px; }
+        .section-title { font-size: 1.8rem; font-weight: 700; color: #5b9bd5; margin: 40px 0 10px; }
+        .sub-title { font-size: 1rem; font-weight: 700; color: #5b9bd5; margin: 20px 0 6px; }
+        .content-text { font-size: 1.05rem; line-height: 1.8; color: #333; margin-bottom: 16px; }
         .footer { text-align: center; padding: 60px 0 30px; border-top: 1px solid #f0f0f0; margin-top: 60px; }
         .social-links a { color: #333; margin: 0 12px; font-size: 1.2rem; transition: 0.3s; }
         .social-links a:hover { color: #cbb35a; }
         .copyright { font-size: 0.7rem; color: #aaa; margin-top: 15px; letter-spacing: 1px; }
+        /* Carousel */
+        .carousel { position: relative; overflow: hidden; margin-bottom: 12px; }
+        .carousel-track { display: flex; transition: transform 0.3s ease; }
+        .carousel-track img { min-width: 100%; height: 600px; object-fit: contain; background: #f5f5f5; }
+        .carousel-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.4); color: white; border: none; padding: 10px 16px; cursor: pointer; font-size: 1.2rem; z-index: 10; }
+        .carousel-btn.prev { left: 8px; }
+        .carousel-btn.next { right: 8px; }
+        .carousel-dots { text-align: center; margin-top: 8px; }
+        .carousel-dots span { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #ccc; margin: 0 4px; cursor: pointer; }
+        .carousel-dots span.active { background: #555; }
+        /* Lightbox */
+        .lightbox { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 1000; justify-content: center; align-items: center; cursor: pointer; }
+        .lightbox.active { display: flex; }
+        .lightbox img { max-width: 90%; max-height: 90vh; object-fit: contain; }
+
+        .back-to-top { display: block; text-align: center; margin: 20px auto 40px; color: #888; font-size: 0.9rem; text-decoration: none; cursor: pointer; }
+        .back-to-top:hover { color: #333; }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Yicheng Lu</h1>
-        <p>Personal Portfolio</p>
-    </header>
+<header>
+    <h1>Yicheng Lu</h1>
+    <p>Personal Portfolio</p>
+</header>
 
-    <nav>
-        <a href="index.html">About</a>
-        <a href="index.html#level-design">Level Design</a>
-        <a href="index.html#game-design">Game Design</a>
-        <a href="index.html#vfx">VFX Study</a>
-        <a href="index.html#award">Award</a>
-    </nav>
+<nav>
+    <a href="index.html">About</a>
+    <a href="index.html#level-design">Level Design</a>
+    <a href="index.html#game-design">Game Design</a>
+    <a href="index.html#vfx">VFX Study</a>
+    <a href="index.html#award">Award</a>
+</nav>
 
-    <div class="container">
-        <a href="index.html#level-design" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Back to Level Design</a>
-        <h1 class="project-title">Cursed Crown Level Design</h1>
-        <p class="project-date">06.2024 - 10.2025</p>
+<div class="container">
+    <a href="index.html#level-design" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Back to Level Design</a>
 
-        <!-- 在这里添加内容 -->
-
+    <div class="project-header">
+        <h1>Cursed Crown Level Design</h1>
+        <p>06.2024 - 10.2025</p>
     </div>
 
-    <footer class="footer">
-        <div class="social-links">
-            <a href="https://www.linkedin.com/in/yicheng-lu-33885a1ba/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="#"><i class="fa-brands fa-facebook"></i></a>
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+    <!-- Description -->
+    <h2 class="section-title">Description</h2>
+    <p class="content-text">"Cursed Crown" marks a significant milestone in my career—it was the first project I contributed to as a Level Designer at Glade Studio right after my graduation. I played an integral role in shaping the player's journey from concept to final implementation, taking charge of the overall level flow and meticulously designing the interactive experience to guide, challenge, and engage players throughout the entire game.</p>
+    <p class="sub-title">Background:</p>
+    <p class="content-text">Set in the medieval fantasy world of Alder, follow the story of our hero and his snarky little friend in an action RPG, as they fight various monsters, solve dungeon puzzles, and recollect long lost memories.</p>
+    <p class="sub-title">Award:</p>
+    <p class="content-text">Recognized as a Best in Play winner at GDC 2025. This accolade, judged by industry experts, highlights the project's excellence in gameplay and design. My involvement encompassed end-to-end level design, where I took ownership of both the macro-level flow and micro-level player experience.</p>
+
+    <!-- Gameplay Demo -->
+    <h2 class="section-title">Gameplay Demo</h2>
+    <p class="content-text">The demo presents a selection of the levels I designed. Further level design concepts, process, and final implementations will be presented and explained below.</p>
+    <video controls style="width: 100%; background: #000; margin-bottom: 40px;">
+        <source src="Videos/Cursed Crown demo.mp4" type="video/mp4">
+    </video>
+
+    <!-- Game Keypoint -->
+    <h2 class="section-title">Game Keypoint - related to LD</h2>
+    <p class="content-text">Given that our game's levels are procedurally generated, the following considerations must be addressed during level design:</p>
+    <ol style="font-size: 1.05rem; line-height: 2; color: #333; padding-left: 24px;">
+        <li>The exits and entrances of each level should generally align. If inconsistencies occur, additional connection paths can be created as buffer zones to link different sections.</li>
+        <li>Due to the procedural generation of levels, it is essential to design and create modular assets that can be easily utilized by level designers during the level design and implementation process.</li>
+        <li>Rest areas should be incorporated between combat rooms to vary pacing and account for the player's emotion curve by strategically combining room types. For example: Combat → Rest → Special Event Trigger.</li>
+        <li>Different types of rooms should be visually distinct, with clear guidance along the primary route leading to the final boss room. This helps prevent players from getting lost in randomly generated layouts.</li>
+    </ol>
+
+    <!-- Level Flow & Game Flow -->
+    <h2 class="section-title">Level Flow & Game Flow</h2>
+    <p class="sub-title">Verdis</p>
+    <p class="content-text">As the first major city in Cursed Crown, Verdis requires a thoughtfully designed overarching layout. The flow logic of Verdis is built around addressing the fundamental questions players encounter when first entering the game world: What is the background story and central theme of the game? What can I do and learn in Verdis? What should I do next?</p>
+    <p class="content-text">These questions will all be answered through my Verdis flow chart. As a level designer, my role is to act as a seamless "guide" for players, crafting intuitive level logic that introduces the game's premise and core themes effectively.</p>
+    <img src="Level Design/Cursed Crown/Level & Game Flow/Verdis Game Flow_v2_Partial.jpg" style="width: 100%; margin-bottom: 12px;" alt="Verdis Game Flow">
+    <p style="font-size: 0.85rem; color: #888; margin-bottom: 24px;">Part of the game flow of Verdis</p>
+    <img src="Level Design/Cursed Crown/Level & Game Flow/Verdis Game Flow_v1.jpg" style="width: 100%; margin-bottom: 12px;" alt="Verdis Game Flow v1">
+    <p style="font-size: 0.85rem; color: #888; margin-bottom: 40px;">These are 2 game & level flows I designed for the game experience we want to provide to players</p>
+
+    <p class="sub-title">Dungeon Levels</p>
+    <p class="content-text">In Cursed Crown, the flow logic of the entire dungeon level will be designed around the game's combat mechanics. For example, since our gameplay is similar to Diablo's dungeon-crawling style, we encourage players to repeatedly enter dungeon levels to challenge varying difficulties and obtain equipment with different attributes and skills. Therefore, when designing levels, considerations must include spatial utilization and replayability, while ensuring the difficulty curve does not escalate excessively.</p>
+    <p class="content-text">Additionally, according to the game's backstory, players have a certain probability of discovering clues related to the background narrative during repeated playthroughs of the level. Collecting these clues will allow them to progress through the level.</p>
+    <div class="carousel" id="carousel-dungeonflow">
+        <div class="carousel-track">
+            <img src="Level Design/Cursed Crown/Level & Game Flow/level flow_1.jpg" alt="">
+            <img src="Level Design/Cursed Crown/Level & Game Flow/level flow_2.jpg" alt="">
         </div>
-        <div class="copyright">© 2021 by Yicheng Lu.</div>
-    </footer>
+        <button class="carousel-btn prev" onclick="moveCarousel('carousel-dungeonflow', -1)">&#8249;</button>
+        <button class="carousel-btn next" onclick="moveCarousel('carousel-dungeonflow', 1)">&#8250;</button>
+        <div class="carousel-dots" id="dots-carousel-dungeonflow"></div>
+    </div>
+    <p style="font-size: 0.85rem; color: #888; margin-bottom: 40px;">The Level Flows I created for Dungeon Level.</p>
+
+    <!-- Verdis Level Design -->
+    <h2 class="section-title">Verdis Level Design</h2>
+    <h3 class="sub-title">Paper Design</h3>
+    <p class="content-text">Here are the paper designs of Verdis Level. This place is nestled in a valley, Verdis expands outward from its central City Hall (Guild). Given that Verdis is situated in a valley, it was designed with ample vertical spaces for players to explore. The city comprises five main districts:</p>
+    <ol style="font-size: 1.05rem; line-height: 2; color: #333; padding-left: 24px; margin-bottom: 24px;">
+        <li>Residential Area: Primarily situated on separate hillsides away from functional zones, accessible via multiple routes.</li>
+        <li>Farmland: Distributed around the residential areas.</li>
+        <li>Training School: Located on a high mountain with a single entrance/exit for weapon skill practice.</li>
+        <li>Marketplace: A core zone where players trade equipment and items, with access to dungeon levels via the rear city gate.</li>
+        <li>Guild City Hall: The central landmark visible immediately upon entering Verdis, designed to enhance memorable recognition.</li>
+    </ol>
+    <div class="carousel" id="carousel-verdispaper">
+        <div class="carousel-track">
+            <img src="Level Design/Cursed Crown/Level 0 - Verdis/Paper Design/village_1.png" alt="">
+            <img src="Level Design/Cursed Crown/Level 0 - Verdis/Paper Design/village_2.png" alt="">
+            <img src="Level Design/Cursed Crown/Level 0 - Verdis/Paper Design/village_3.png" alt="">
+            <img src="Level Design/Cursed Crown/Level 0 - Verdis/Paper Design/village_-1.png" alt="">
+            <img src="Level Design/Cursed Crown/Level 0 - Verdis/Paper Design/living area& Inn.jpg" alt="">
+            <img src="Level Design/Cursed Crown/Level 0 - Verdis/Paper Design/living area_1.jpg" alt="">
+            <img src="Level Design/Cursed Crown/Level 0 - Verdis/Paper Design/Marketplace Concept.webp" alt="">
+            <img src="Level Design/Cursed Crown/Level 0 - Verdis/Paper Design/marketplace_design.webp" alt="">
+        </div>
+        <button class="carousel-btn prev" onclick="moveCarousel('carousel-verdispaper', -1)">&#8249;</button>
+        <button class="carousel-btn next" onclick="moveCarousel('carousel-verdispaper', 1)">&#8250;</button>
+        <div class="carousel-dots" id="dots-carousel-verdispaper"></div>
+    </div>
+
+    <h3 class="sub-title">Mood Board & Final Result</h3>
+    <p class="content-text">I gathered several references to create a mood board for Verdis, which will guide the subsequent blockout phase and help define the artistic direction. The final overall representation of Verdis is presented directly below.</p>
+    <div class="carousel" id="carousel-verdismood">
+        <div class="carousel-track">
+            <img src="Level Design/Cursed Crown/Level 0 - Verdis/Mood Board of Verdis.jpg" alt="">
+            <img src="Level Design/Cursed Crown/Level 0 - Verdis/Verdis_TrainingArea.png" alt="">
+            <img src="Level Design/Cursed Crown/Level 0 - Verdis/Verdis_CentralLayout.png" alt="">
+            <img src="Level Design/Cursed Crown/Level 0 - Verdis/Verdis_marketplace.png" alt="">
+            <img src="Level Design/Cursed Crown/Level 0 - Verdis/Verdis_LivingArea.png" alt="">
+        </div>
+        <button class="carousel-btn prev" onclick="moveCarousel('carousel-verdismood', -1)">&#8249;</button>
+        <button class="carousel-btn next" onclick="moveCarousel('carousel-verdismood', 1)">&#8250;</button>
+        <div class="carousel-dots" id="dots-carousel-verdismood"></div>
+    </div>
+
+    <!-- Dungeon Level Design -->
+    <h2 class="section-title">Dungeon Level Design</h2>
+    <h3 class="sub-title">Level 1 & 2 Pace & Flow</h3>
+    <ul style="font-size: 1.05rem; line-height: 2; color: #333; padding-left: 24px; margin-bottom: 24px;">
+        <li>Pace: Level 1 (chill → combat → rest → climax → rest) → Level 2.</li>
+        <li>While level 1 is designed to be more focusing on players grinding gears and leveling, level 2 is created to provide more intense combat and challenging as it is related to the endgame.</li>
+    </ul>
+
+    <h3 class="sub-title">Level Theme</h3>
+    <ul style="font-size: 1.05rem; line-height: 2; color: #333; padding-left: 24px; margin-bottom: 24px;">
+        <li>Visual: Stylized, Anime style, Visual guidance: lighting, some specific items for guidance (torch)</li>
+        <li>Environment:
+            <ul style="padding-left: 24px;">
+                <li>Level 2 is exploring different "lost temples" which in the Mountain Valley</li>
+                <li>Level 1 is about players exploring abandoned, cursed ruins overrun by monsters.</li>
+                <li>Verdis is designed to be a crowded central area to provide players with multiple convenient features.</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h3 class="sub-title">Level 1 Paper Design</h3>
+    <p class="content-text">In the Dungeon Level, we ensure that during procedural generation, the connections between rooms are seamless while providing players with a unique experience each time they enter. Significant effort has been invested in designing transitions and diverse rooms—for instance, incorporating varied elevation differences, cover systems, and environmental features like dynamic weather.</p>
+    <img src="Level Design/Cursed Crown/Replayable Level 1/Paper Design/Combat LD - yicheng.jpg" style="width: 100%; margin-bottom: 12px;" alt="">
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 40px;">
+        <img src="Level Design/Cursed Crown/Replayable Level 1/Paper Design/Combat LD - Kai.jpg" style="width: 100%; object-fit: cover;" alt="">
+        <img src="Level Design/Cursed Crown/Replayable Level 1/Paper Design/Combat Level Design-Jason.png" style="width: 100%; object-fit: cover;" alt="">
+    </div>
+
+    <h3 class="sub-title">Level 2 Paper Design & Moodboard</h3>
+    <p class="content-text">Dungeon Level 2 is divided into two main sections: Start Room and Combat Rooms. When players meet specific conditions, they can unlock Dungeon Level 2. They will first enter the Start Room, where they can choose the elemental theme they wish to challenge.</p>
+    <p class="content-text">In Dungeon Level 2, players find themselves in the Lost Temple. We aimed to create the atmosphere of a ruined temple while giving players a sense of endless exploration within its depths. To achieve this, we incorporated numerous ascending and descending staircases in the connecting areas and designed multi-level spaces within the rooms.</p>
+    <div class="carousel" id="carousel-dungeonlv2">
+        <div class="carousel-track">
+            <img src="Level Design/Cursed Crown/Replayable Level 2/Start Area/StartRoom Moodboard.jpg" alt="">
+            <img src="Level Design/Cursed Crown/Replayable Level 2/Start Area/Level2 - Start Area Design.png" alt="">
+            <img src="Level Design/Cursed Crown/Replayable Level 2/Dungeon Rooms/Level2 - Indoor Level Design.png" alt="">
+        </div>
+        <button class="carousel-btn prev" onclick="moveCarousel('carousel-dungeonlv2', -1)">&#8249;</button>
+        <button class="carousel-btn next" onclick="moveCarousel('carousel-dungeonlv2', 1)">&#8250;</button>
+        <div class="carousel-dots" id="dots-carousel-dungeonlv2"></div>
+    </div>
+    <p style="font-size: 0.85rem; color: #888; margin-bottom: 16px;">Click on the image to enlarge it for detailed viewing.</p>
+    <p class="content-text">Here is the Level 2 Flow Chart:</p>
+    <img src="Level Design/Cursed Crown/Replayable Level 2/Dungeon Rooms/Dungeon level 2 flow.jpg" style="width: 100%; margin-bottom: 40px;" alt="Dungeon Level 2 Flow">
+
+    <!-- Dungeon Level Iterations -->
+    <h2 class="section-title">Dungeon Level Iterations</h2>
+    <ul style="font-size: 1.05rem; line-height: 2; color: #333; padding-left: 24px; margin-bottom: 24px;">
+        <li>Linear experience → random: We were inspired by rogue-like level designs including Diablo, PoE, Hades and etc. Thus, we have designed a bunch of randomizable elements like buff, enemies & map chunks.</li>
+        <li>Level Design with AI companion:
+            <ul style="padding-left: 24px;">
+                <li>Combat: Some commands (attack, healing), Advice from AI companion: use the cover or use the commands to help.</li>
+                <li>Exploration: Let AI companion help players to find easter eggs, treasure boxes or secret paths.</li>
+                <li>Puzzles: With the introduction of the AI companion feature, we only need to design puzzles that can be completed with at least two participants, significantly reducing the difficulty of our level design.</li>
+            </ul>
+        </li>
+        <li>Level Change: We chose to merge the rogue-like experience and Diablo-like experience. In Dungeon Level 1, we decided to expand the rooms to create more combinations of level experience, such as puzzle + combat or side quest + combat.</li>
+    </ul>
+
+    <!-- Dungeon Level 2 Showcase -->
+    <h2 class="section-title">Dungeon Level 2 Showcase</h2>
+    <p class="content-text">Since the previous gameplay demo video showcased parts of Dungeon Level 1, I will include some level showcase images of Dungeon Level 2 here.</p>
+    <div class="carousel" id="carousel-showcase">
+        <div class="carousel-track">
+            <img src="Level Design/Cursed Crown/Replayable Level 2/Dungeon Level 2_1.png" alt="">
+            <img src="Level Design/Cursed Crown/Replayable Level 2/Dungeon Level 2_2.png" alt="">
+            <img src="Level Design/Cursed Crown/Replayable Level 2/Dungeon Level 2_3.png" alt="">
+            <img src="Level Design/Cursed Crown/Replayable Level 2/Dungeon Level 2_4.png" alt="">
+            <img src="Level Design/Cursed Crown/Replayable Level 2/Dungeon Level 2_5.png" alt="">
+            <img src="Level Design/Cursed Crown/Replayable Level 2/Dungeon Level 2_6.png" alt="">
+            <img src="Level Design/Cursed Crown/Replayable Level 2/Dungeon Level 2_7.png" alt="">
+            <img src="Level Design/Cursed Crown/Replayable Level 2/Dungeon Level 2_8.png" alt="">
+            <img src="Level Design/Cursed Crown/Replayable Level 2/Dungeon Level 2_9.png" alt="">
+            <img src="Level Design/Cursed Crown/Replayable Level 2/Dungeon Level 2_10.png" alt="">
+        </div>
+        <button class="carousel-btn prev" onclick="moveCarousel('carousel-showcase', -1)">&#8249;</button>
+        <button class="carousel-btn next" onclick="moveCarousel('carousel-showcase', 1)">&#8250;</button>
+        <div class="carousel-dots" id="dots-carousel-showcase"></div>
+    </div>
+
+</div>
+
+<footer class="footer">
+    <div class="social-links">
+        <a href="https://www.linkedin.com/in/yicheng-lu-33885a1ba/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+    </div>
+    <div class="copyright">© 2021 by Yicheng Lu.</div>
+</footer>
+
+<a class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+    <i class="fa-solid fa-arrow-up"></i> Back to Top
+</a>
+
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="">
+</div>
+
+<script>
+    function moveCarousel(id, dir) {
+        const carousel = document.getElementById(id);
+        const track = carousel.querySelector('.carousel-track');
+        const imgs = track.querySelectorAll('img');
+        let current = parseInt(track.dataset.current || 0);
+        current = (current + dir + imgs.length) % imgs.length;
+        track.dataset.current = current;
+        track.style.transform = `translateX(-${current * 100}%)`;
+        const dots = document.querySelectorAll(`#dots-${id} span`);
+        dots.forEach((d, i) => d.classList.toggle('active', i === current));
+    }
+
+    function openLightbox(src) {
+        document.getElementById('lightbox-img').src = src;
+        document.getElementById('lightbox').classList.add('active');
+    }
+
+    function closeLightbox() {
+        document.getElementById('lightbox').classList.remove('active');
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('.carousel').forEach(carousel => {
+            const id = carousel.id;
+            const imgs = carousel.querySelectorAll('img');
+            const dotsContainer = document.getElementById(`dots-${id}`);
+            if (!dotsContainer) return;
+            imgs.forEach((_, i) => {
+                const dot = document.createElement('span');
+                if (i === 0) dot.classList.add('active');
+                dot.onclick = () => {
+                    carousel.querySelector('.carousel-track').dataset.current = i - 1;
+                    moveCarousel(id, 1);
+                };
+                dotsContainer.appendChild(dot);
+            });
+        });
+        document.querySelectorAll('.carousel-track img').forEach(img => {
+            img.style.cursor = 'zoom-in';
+            img.onclick = () => openLightbox(img.src);
+        });
+    });
+</script>
 
 </body>
 </html>

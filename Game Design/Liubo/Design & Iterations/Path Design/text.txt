@@ -1,0 +1,7 @@
+Path Design:
+
+According to the ancient books, there are nine types of positions related to the board, but their meanings on the board are unclear. For convenience, We use "A" to "I" to refer to them.
+ 
+Now, here's another quote from an ancient book that provided a formula for playing Liubo, which I have replaced with A to I for ease of reference.
+
+According to this formula, we believe that positions A to I connect with each other to form a path. Connecting all four sets of A to I, we got a diagram of a path with four branches connecting the corners to the center.
