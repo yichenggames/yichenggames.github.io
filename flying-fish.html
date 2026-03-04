@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flying Fish | Yicheng Lu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; margin: 0; padding: 0; color: #333; line-height: 1.6; background: #fff; font-weight: 500; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
+        header { text-align: center; padding: 40px 0 10px; background-color: #f9f9f9; }
+        header h1 { font-size: 2rem; letter-spacing: 5px; margin: 0; font-weight: 700; }
+        header p { font-size: 0.9rem; letter-spacing: 8px; color: #666; margin-top: 4px; }
+        nav { background-color: #f9f9f9; display: flex; justify-content: center; gap: 160px; padding: 20px 0 40px; border-bottom: 1px solid #f0f0f0; }
+        nav a { text-decoration: none; color: #888; font-size: 1.0rem; transition: 0.3s; }
+        nav a:hover { color: #333; }
+        .back-btn { display: inline-block; margin: 30px 0 10px; color: #888; font-size: 0.9rem; text-decoration: none; }
+        .back-btn:hover { color: #333; }
+        .back-btn i { margin-right: 6px; }
+        .project-header { text-align: center; padding: 40px 0 30px; margin-bottom: 40px; }
+        .project-header h1 { font-size: 2.8rem; font-weight: 700; color: #1a3a5a; margin: 0; }
+        .project-header p { font-size: 0.85rem; color: #888; margin-top: 8px; }
+        .section-title { font-size: 1.8rem; font-weight: 700; color: #5b9bd5; margin: 40px 0 10px; }
+        .sub-title { font-size: 1rem; font-weight: 700; color: #5b9bd5; margin: 20px 0 6px; }
+        .content-text { font-size: 1.05rem; line-height: 1.8; color: #333; margin-bottom: 16px; }
+        .caption { font-size: 0.85rem; color: #888; margin: 6px 0 20px; text-align: center; }
+        ol, ul { font-size: 1.05rem; line-height: 2; color: #333; padding-left: 24px; margin-bottom: 24px; }
+        .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px; }
+        .two-col img { width: 100%; object-fit: contain; background: #f5f5f5; }
+        .three-col { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin-bottom: 16px; }
+        .three-col img { width: 100%; object-fit: contain; background: #f5f5f5; }
+        /* Carousel */
+        .carousel { position: relative; overflow: hidden; margin-bottom: 12px; }
+        .carousel-track { display: flex; transition: transform 0.3s ease; }
+        .carousel-track img { min-width: 100%; height: 600px; object-fit: contain; background: #f5f5f5; cursor: zoom-in; }
+        .carousel-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.4); color: white; border: none; padding: 10px 16px; cursor: pointer; font-size: 1.2rem; z-index: 10; }
+        .carousel-btn.prev { left: 8px; }
+        .carousel-btn.next { right: 8px; }
+        .carousel-dots { text-align: center; margin-top: 8px; }
+        .carousel-dots span { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #ccc; margin: 0 4px; cursor: pointer; }
+        .carousel-dots span.active { background: #555; }
+        /* Lightbox */
+        .lightbox { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 1000; justify-content: center; align-items: center; cursor: pointer; }
+        .lightbox.active { display: flex; }
+        .lightbox img { max-width: 90%; max-height: 90vh; object-fit: contain; }
+        .back-to-top { display: block; text-align: center; margin: 20px auto 40px; color: #888; font-size: 0.9rem; text-decoration: none; cursor: pointer; }
+        .back-to-top:hover { color: #333; }
+        .footer { text-align: center; padding: 60px 0 30px; border-top: 1px solid #f0f0f0; margin-top: 20px; }
+        .social-links a { color: #333; margin: 0 12px; font-size: 1.2rem; transition: 0.3s; }
+        .social-links a:hover { color: #4a9a7a; }
+        .copyright { font-size: 0.7rem; color: #aaa; margin-top: 15px; letter-spacing: 1px; }
+        hr.section-divider { border: none; border-top: 1px dotted #ddd; margin: 40px 0; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Yicheng Lu</h1>
+        <p>Personal Portfolio</p>
+    </header>
+
+    <nav>
+        <a href="index.html">About</a>
+        <a href="index.html#level-design">Level Design</a>
+        <a href="index.html#game-design">Game Design</a>
+        <a href="index.html#vfx">VFX Study</a>
+        <a href="index.html#award">Award</a>
+    </nav>
+
+    <div class="container">
+        <a href="index.html#game-design" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Back to Game Design</a>
+
+        <div class="project-header">
+            <h1>Flying Fish</h1>
+            <p>Casual Game · Icaros Platform · 10.2022</p>
+        </div>
+        
+        <a href="https://youtu.be/j5jA8tbhsNY" target="_blank" style="display: block; position: relative; margin-bottom: 20px;">
+            <img src="https://img.youtube.com/vi/j5jA8tbhsNY/hqdefault.jpg" style="width: 100%; display: block;" alt="Flying Fish Demo">
+            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 70px; height: 70px; background: rgba(255,0,0,0.85); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                <div style="width: 0; height: 0; border-top: 18px solid transparent; border-bottom: 18px solid transparent; border-left: 28px solid white; margin-left: 6px;"></div>
+            </div>
+        </a>
+        <hr style="border: none; border-top: 1px dotted #ddd; margin: 0 0 40px;">
+        
+        <!-- Abstract -->
+        <h2 class="section-title">Abstract</h2>
+        <p class="content-text">Flying Fish is a funny casual game which platform is the Icaros (flying chair). Player needs to lay on the flying chair and control the angle and the power to shoot the fish. The game goal is to help the fish get his hat back, because his hat is escaping randomly in the game world.</p>
+
+        <!-- Background -->
+        <h2 class="section-title">Background</h2>
+        <p class="sub-title">Main Story:</p>
+        <p class="content-text">Once upon a day, a little fish whose name is Jumpy is laying on the beach with his lovely hat. Suddenly, the wind starts blowing. Jumpy's hat just flies away from his head. Our poor Jumpy lost his favorite hat and feels sad. Now, it is your turn to help Jumpy to get his hat back. How will you help him?</p>
+        <p class="sub-title">Background of the World:</p>
+        <p class="content-text">The idea of Flying Fish comes from a fish called the Mudskipper. This kind of fish can jump on the ground or mud. Because we are using the Flying Chair as this project's platform, the idea is based on the Mudskipper — players can control the jumping or flying of the fish in the game.</p>
+
+        <div class="three-col">
+            <div>
+                <img src="Game Design/Flying Fish/Assets/Abstract & Background/Scene_1.png" alt="">
+                <p class="caption">Scene 1</p>
+            </div>
+            <div>
+                <img src="Game Design/Flying Fish/Assets/Abstract & Background/Scene_2.png" alt="">
+                <p class="caption">Scene 2</p>
+            </div>
+            <div>
+                <img src="Game Design/Flying Fish/Assets/Abstract & Background/Scene_3.png" alt="">
+                <p class="caption">Scene 3</p>
+            </div>
+        </div>
+
+        <hr class="section-divider">
+
+        <!-- Team Intro -->
+        <h2 class="section-title">Team Intro</h2>
+        <p class="content-text">This is a group project made by me and my teammates during the Build Virtual World course (Carnegie Mellon University Entertainment Technology Center). Our team has 5 students: 1 sound designer, 2 artists and 2 programmers. In this course, I learned about how a teamwork project looks like and the whole pipeline in the game industry. I am the programmer and the game designer in my team. My majority job is thinking about the game features and game flow, and coding the whole game world.</p>
+        <img src="Game Design/Flying Fish/Assets/Team Intro_Credits.png" style="width: 60%; display: block; margin: 0 auto 24px;" alt="">
+
+        <hr class="section-divider">
+
+        <!-- Platform Intro -->
+        <h2 class="section-title">Platform Intro</h2>
+        <p class="content-text">The Icaros, also known as the Flying Chair, is a platform that requires players to use their whole body as input. Normally, games designed for the Icaros are Virtual Reality games. However, our team designed a PC game — it's more like a "fitness game" because the player needs to control the jump and direction of the fish. It is hard to control for first-time players.</p>
+        <div class="two-col">
+            <div>
+                <img src="Game Design/Flying Fish/Assets/Platform Intro/Icaros demo.jpg" alt="">
+                <p class="caption">Icaros Demo</p>
+            </div>
+            <div>
+                <img src="Game Design/Flying Fish/Assets/Platform Intro/Platform_2.png" alt="">
+                <p class="caption">Our Team is Testing</p>
+            </div>
+        </div>
+
+        <hr class="section-divider">
+
+        <!-- Brainstorm -->
+        <h2 class="section-title">Brainstorm</h2>
+        <p class="content-text">We picked the jumping fish idea from all 3 ideas. Although I think all these ideas are unique and impressive, I felt we needed to use all the features of the flying chair. For example, binding a VIVE Tracker on the flying chair to track the player's 3D position. This lets the player feel more like the behavior of the Mudskipper when they are "jumping" in the game.</p>
+        <p class="content-text">Here is our team's voting and ideas list:</p>
+        <img src="Game Design/Flying Fish/Assets/team36 brainstorm.png" style="width: 100%; object-fit: contain; background: #f5f5f5; margin-bottom: 8px;" alt="">
+        <p class="caption">Team's Brainstorm</p>
+
+        <hr class="section-divider">
+
+        <!-- Game Flow -->
+        <h2 class="section-title">Game Flow</h2>
+        <p class="content-text">Our game's flow is pretty straightforward and simple.</p>
+        <ol>
+            <li><strong>Game Goal:</strong> Help the fish to get his hat.</li>
+            <li><strong>Game Rules:</strong>
+                <ul>
+                    <li>Try not to fall into the water, otherwise the fish will explode.</li>
+                    <li>The surface of the land and obstacles in the game will let the fish bounce.</li>
+                    <li>When using Icaros, do not move too much — otherwise, the player will fall off.</li>
+                </ul>
+            </li>
+            <li><strong>Main Flow:</strong> There are some islands. When the player controls the flying fish to get the hat for the first time, the hat will move to the second island. The player needs to keep chasing the hat until it escapes to the last island. Then, the fish can finally get his hat back.</li>
+        </ol>
+        <img src="Game Design/Flying Fish/Assets/Game Flow.jpg" style="width: 40%; display: block; margin: 0 auto 8px;" alt="">
+        <p class="caption">Team's Game Flow Chart</p>
+
+        <hr class="section-divider">
+
+        <!-- Map Design -->
+        <h2 class="section-title">Map Design</h2>
+        <p class="content-text">The idea of the game's map comes from our game's background. We designed some islands and distributed them evenly on the sea. However, I needed to consider the sequence of the hat's positions, and because the surface of the islands is low poly, I wanted players to feel more fun and challenge. I added a bouncing feature to the fish — when the flying fish lands on the ground it will bounce in a direction (according to the land surface). This map was built in Maya.</p>
+        <img src="Game Design/Flying Fish/Assets/map design.PNG" style="width: 100%; object-fit: contain; background: #f5f5f5; margin-bottom: 8px;" alt="">
+        <p class="caption">Part of the Game's Map</p>
+
+        <hr class="section-divider">
+
+        <!-- Character Design -->
+        <h2 class="section-title">Character Design</h2>
+        <p class="content-text">The idea of Flying Fish is from a fish called "mudskipper." I noticed that mudskippers can jump on the ground, so I wanted the player to control the fish to jump and find the hat. The reason we call the fish a "flying fish" is that players can control the fish to jump really high and do a double jump — it's just like the fish is flying in the air.</p>
+        <p class="content-text">The final model of the character was built by our artists in Maya.</p>
+        <img src="Game Design/Flying Fish/Assets/character design_reference.jpg" style="width: 40%; display: block; margin: 0 auto 8px;" alt="">
+        <p class="caption">Image of Mudskipper</p>
+
+        <hr class="section-divider">
+
+        <!-- Game Features -->
+        <h2 class="section-title">Game Features</h2>
+        <p class="sub-title">Main Character (Fish) Features:</p>
+        <ol>
+            <li><strong>Fish's movement:</strong> Controlled by the Icaros.</li>
+            <li><strong>Hat's movement:</strong> Set trigger to let the hat move to the next position.</li>
+            <li><strong>Map's feature:</strong> "Bounce" feature when the fish hits the ground.</li>
+            <li><strong>Bad Condition:</strong> Player cannot touch the sea — it is the only "trap" that will cause the fish to die.</li>
+        </ol>
+        <p class="content-text"><strong>Player will never fail the game!!!</strong></p>
+        <img src="Game Design/Flying Fish/Assets/flying fish game features.png" style="width: 100%; object-fit: contain; background: #f5f5f5; margin-bottom: 8px;" alt="">
+        <p class="caption">Feature Designing MindMap</p>
+
+        <hr class="section-divider">
+
+        <!-- Final Playtest & Feedbacks -->
+        <h2 class="section-title">Final Playtest & Feedbacks</h2>
+        <p class="content-text">After we finished the final version of the game, we presented it to the professors and the rest of the class. We collected the following feedbacks.</p>
+        <p class="sub-title">Feedbacks from Professors:</p>
+        <ul>
+            <li>Why can our fish not land in the sea? Our team explained that it's like a frog trying to stay out of the ocean — the fish doesn't like saltwater. The professor understood the meaning of the mudskipper concept.</li>
+            <li>"It's funny. I kind of want to help the flying fish. Like we're gliding in the air — I love the fact that you know it's a mudskipper. It's a real point. Knowing your world is part of building a world."</li>
+            <li>"The interaction is really unique. The escalation of chasing the hat felt like it could be tuned more — how could the first time feel like a surprise, and then change a little each time?"</li>
+        </ul>
+        <p class="sub-title">Feedbacks from Class:</p>
+        <ul>
+            <li>It's a fun game and you use Icaros.</li>
+            <li>It's a new way of using Icaros because it simulates flying, but you use it with a fish.</li>
+        </ul>
+
+        <hr class="section-divider">
+
+        <!-- Future Update -->
+        <h2 class="section-title">Future Update</h2>
+        <ul>
+            <li>Refine some details and make it a fully fleshed out game.</li>
+            <li>Fix some bugs.</li>
+            <li>Add more objects and polish up our level design.</li>
+            <li>If possible, add some moving obstacles to enhance the difficulty of the game level.</li>
+        </ul>
+        <p class="content-text">As a game designer, I always need to consider the game's impact, cost and risk.</p>
+        <img src="Game Design/Flying Fish/Assets/Future update.png" style="width: 80%; display: block; margin: 0 auto 24px;" alt="">
+
+    </div>
+
+    <a class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        <i class="fa-solid fa-arrow-up"></i> Back to Top
+    </a>
+
+    <footer class="footer">
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/yicheng-lu-33885a1ba/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+        <div class="copyright">© 2021 by Yicheng Lu.</div>
+    </footer>
+
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img" src="" alt="">
+    </div>
+
+    <script>
+        function moveCarousel(id, dir) {
+            const carousel = document.getElementById(id);
+            const track = carousel.querySelector('.carousel-track');
+            const imgs = track.querySelectorAll('img');
+            let current = parseInt(track.dataset.current || 0);
+            current = (current + dir + imgs.length) % imgs.length;
+            track.dataset.current = current;
+            track.style.transform = `translateX(-${current * 100}%)`;
+            const dots = document.querySelectorAll(`#dots-${id} span`);
+            dots.forEach((d, i) => d.classList.toggle('active', i === current));
+            const captionEl = document.getElementById(`caption-${id}`);
+            if (captionEl && imgs[current].dataset.caption) {
+                captionEl.textContent = imgs[current].dataset.caption;
+            }
+        }
+
+        function openLightbox(src) {
+            document.getElementById('lightbox-img').src = src;
+            document.getElementById('lightbox').classList.add('active');
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.carousel').forEach(carousel => {
+                const id = carousel.id;
+                const imgs = carousel.querySelectorAll('img');
+                const dotsContainer = document.getElementById(`dots-${id}`);
+                if (!dotsContainer) return;
+                imgs.forEach((_, i) => {
+                    const dot = document.createElement('span');
+                    if (i === 0) dot.classList.add('active');
+                    dot.onclick = () => {
+                        carousel.querySelector('.carousel-track').dataset.current = i - 1;
+                        moveCarousel(id, 1);
+                    };
+                    dotsContainer.appendChild(dot);
+                });
+            });
+
+            document.querySelectorAll('img:not(.lightbox img)').forEach(img => {
+                img.style.cursor = 'zoom-in';
+                img.onclick = () => openLightbox(img.src);
+            });
+        });
+    </script>
+
+</body>
+</html>

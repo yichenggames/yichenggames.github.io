@@ -68,7 +68,7 @@
     </nav>
 
     <div class="container">
-        <a href="index.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Back to Game Design</a>
+        <a href="index.html#game-design" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Back to Game Design</a>
 
         <div class="project-header">
             <h1>Cubic Factory</h1>
@@ -85,7 +85,7 @@
         <p class="sub-title">Story:</p>
         <p class="content-text">In a world known as "Mouse Wonderland," resides a colony of cunning and agile mice. Among them, Robin, a particularly curious mouse, learns of a legendary treasure: the "Golden Cheese," rumored to be the most delectable cheese ever tasted. Eager to experience its rumored delights, Robin embarks on a daring journey to the cheese factory, where the coveted cheese is said to be kept. Upon arriving at the factory, Robin encounters a series of intricate puzzles and challenges, designed to safeguard the prized cheese. With his sharp wit and nimble reflexes, Robin must navigate through each puzzle, overcoming obstacles and outsmarting the factory's defenses to reach the Golden Cheese.</p>
         <p class="content-text">Here is the download link of the whole experience (Only supports Windows):
-            <a href="files/CubicFactory.zip" download style="display: inline-block; background: #c9a84c; color: white; padding: 8px 20px; text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; font-weight: 700; margin-left: 8px;">DOWNLOAD</a>
+            <a href="Game Design/Cubic Factory/Assets/CubicFactory.zip" download style="display: inline-block; background: #c9a84c; color: white; padding: 8px 20px; text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; font-weight: 700; margin-left: 8px;">DOWNLOAD</a>
         </p>
 
         <!-- Gameplay Demo -->
@@ -95,34 +95,41 @@
         </video>
 
         <!-- Game Design: Mechanics -->
-        <h2 class="section-title">Game Design: Mechanics</h2>
-        <p class="sub-title">Basic Mechanics:</p>
-        <ul>
-            <li>Grid-based movement</li>
-            <li>Boxes movement based on the grid cells</li>
-            <li>Box pushing</li>
-            <li>Box pulling out</li>
-        </ul>
-        <p class="sub-title">Core Mechanics:</p>
-        <ul>
-            <li>Box Chemical Change — Electric</li>
-            <li>Environmental items or machinery
+        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; margin-bottom: 24px;">
+            <div>
+                <p class="sub-title">Basic Mechanics:</p>
                 <ul>
-                    <li>Conveyor belts</li>
-                    <li>Different kinds of floor (Electric floor, Power base)</li>
-                    <li>Battery</li>
+                    <li>Grid-based movement</li>
+                    <li>Boxes movement based on the grid cells</li>
+                    <li>Box pushing</li>
+                    <li>Box pulling out</li>
                 </ul>
-            </li>
-        </ul>
-        <p class="sub-title">Basic Movement (Input):</p>
-        <ul>
-            <li><strong>W</strong> — move upward</li>
-            <li><strong>A</strong> — move to the left</li>
-            <li><strong>S</strong> — move downward</li>
-            <li><strong>D</strong> — move to the right</li>
-            <li><strong>Space</strong> — push or pull boxes</li>
-        </ul>
-        <img src="Game Design/Cubic Factory/Assets/mechanics_gif.gif" style="width: 100%; margin-bottom: 24px;" alt="">
+            </div>
+            <div>
+                <p class="sub-title">Core Mechanics:</p>
+                <ul>
+                    <li>Box Chemical Change — Electric</li>
+                    <li>Environmental items or machinery
+                        <ul>
+                            <li>Conveyor belts</li>
+                            <li>Different kinds of floor (Electric floor, Power base)</li>
+                            <li>Battery</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <p class="sub-title">Basic Movement (Input):</p>
+                <ul>
+                    <li><strong>W</strong> — move upward</li>
+                    <li><strong>A</strong> — move to the left</li>
+                    <li><strong>S</strong> — move downward</li>
+                    <li><strong>D</strong> — move to the right</li>
+                    <li><strong>Space</strong> — push or pull boxes</li>
+                </ul>
+            </div>
+        </div>
+        <img src="Game Design/Cubic Factory/Assets/gamemechanics.gif" style="width: 100%; margin-bottom: 24px;" alt="">
 
         <!-- Game Design: Character -->
         <h2 class="section-title">Game Design: Character</h2>
@@ -131,7 +138,7 @@
         <p class="content-text">We use the character in Overcooked as our character's reference.</p>
         <div class="two-col">
             <div>
-                <img src="Game Design/Cubic Factory/Assets/overcook_rat.png" alt="">
+                <img src="Game Design/Cubic Factory/Assets/overcook rat.png" alt="">
                 <p class="caption">Art Reference (Overcooked)</p>
             </div>
             <div>
@@ -142,22 +149,22 @@
         <p class="sub-title">Character Animation:</p>
         <div class="three-col">
             <div>
-                <img src="Game Design/Cubic Factory/Assets/anim_push.gif" style="width: 100%;" alt="">
+                <img src="Game Design/Cubic Factory/Assets/cubicfac_push.gif" style="width: 100%;" alt="">
                 <p class="caption">Push</p>
             </div>
             <div>
-                <img src="Game Design/Cubic Factory/Assets/anim_pull.gif" style="width: 100%;" alt="">
+                <img src="Game Design/Cubic Factory/Assets/cubicfac_pull.gif" style="width: 100%;" alt="">
                 <p class="caption">Pull</p>
             </div>
             <div>
-                <img src="Game Design/Cubic Factory/Assets/anim_walk.gif" style="width: 100%;" alt="">
+                <img src="Game Design/Cubic Factory/Assets/cubicfac_walk.gif" style="width: 100%;" alt="">
                 <p class="caption">Movement (Walk)</p>
             </div>
         </div>
 
         <!-- Game Design: Game Flow -->
         <h2 class="section-title">Game Design: Gameplay (Game Flow)</h2>
-        <img src="Game Design/Cubic Factory/Assets/game_flow.jpg" style="width: 100%; object-fit: contain; background: #f5f5f5; margin-bottom: 16px;" alt="">
+        <img src="Game Design/Cubic Factory/Assets/CubicF_game flow.jpg" style="width: 100%; object-fit: contain; background: #f5f5f5; margin-bottom: 16px;" alt="">
         <p class="content-text">Here is the game flow map. We have totally 4 levels in the game (I use red lines to separate each level). First, players will enter the tutorial level to learn all the basic features such as push, pull and walk. Then, they enter the next level and learn the core mechanics like conductive & insulation. In the 3rd level, we will introduce the Conveyor Belt features to the players. In the final level, players need to use all the knowledge they have learned in previous levels to solve puzzles and obtain the golden cheese.</p>
 
         <!-- In-Game Camera -->
@@ -166,8 +173,8 @@
         <p class="content-text">The camera always remains at a fixed position, angled 50 degrees downward from above. Since the size of the level will be larger than the coverage area of the camera, we divide one level into several areas. Whenever the player completes the puzzle in the current area and enters the next one, the camera switches to the map of the next area, and during this transition, the character cannot be controlled. This is to prevent the player from getting disoriented during the camera switch.</p>
         <p class="content-text">Also, the camera can rotate 90 degrees. Players can press "Q" to turn left or "E" to turn right, rotating the camera by 90 degrees. This allows players to better observe areas on the map that are obscured by objects.</p>
         <div class="two-col">
-            <img src="Game Design/Cubic Factory/Assets/cam_angle.png" alt="">
-            <img src="Game Design/Cubic Factory/Assets/cam_rotate.gif" alt="">
+            <img src="Game Design/Cubic Factory/Assets/cam angel.png" alt="">
+            <img src="Game Design/Cubic Factory/Assets/camera_rotate.gif" alt="">
         </div>
 
         <!-- Tutorial -->
@@ -187,9 +194,7 @@
 
         <p class="sub-title">Electricity — Insulation</p>
         <p class="content-text">If players are stuck by an electric circuit on the map, they can find some boxes to insulate the circuits thus players can pass it. Also, unplugging the battery can insulate the circuit too.</p>
-        <video controls style="width: 100%; background: #000; margin-bottom: 16px;">
-            <source src="Videos/cubic_electricity.mp4" type="video/mp4">
-        </video>
+        <img src="Game Design/Cubic Factory/Assets/conductive_gif.gif" style="width: 100%; margin-bottom: 16px;" alt="">
 
         <p class="sub-title">Conveyor Belt</p>
         <p class="content-text">The conveyor belt is an automatic moving belt. Any boxes can be placed on the conveyor belt and the conveyor belt only turns on when the battery is charging. Conveyor belt will have an indicator to show if it has power. Red arrows mean no power. Green arrows mean it has power and is working.</p>
@@ -205,26 +210,27 @@
 
         <div class="carousel" id="carousel-features">
             <div class="carousel-track">
-                <img src="Game Design/Cubic Factory/Assets/conveyor_belt.gif" alt="">
-                <img src="Game Design/Cubic Factory/Assets/electric_floor.png" alt="">
-                <img src="Game Design/Cubic Factory/Assets/battery.png" alt="">
-                <img src="Game Design/Cubic Factory/Assets/trigger.gif" alt="">
+                <img src="Game Design/Cubic Factory/Assets/conveyorbelt.gif" alt="" data-caption="Conveyor Belt">
+                <img src="Game Design/Cubic Factory/Assets/Battery.png" alt="" data-caption="Battery">
+                <img src="Game Design/Cubic Factory/Assets/Electric floor.png" alt="" data-caption="Electric Floors/Wires">
+                <img src="Game Design/Cubic Factory/Assets/triggers.gif" alt="" data-caption="Trigger">
             </div>
             <button class="carousel-btn prev" onclick="moveCarousel('carousel-features', -1)">&#8249;</button>
             <button class="carousel-btn next" onclick="moveCarousel('carousel-features', 1)">&#8250;</button>
             <div class="carousel-dots" id="dots-carousel-features"></div>
         </div>
+        <p class="caption" id="caption-carousel-features">Conveyor Belt</p>
 
         <p class="sub-title">Collectable Object</p>
         <p class="content-text">There are some cheeses for players to collect during the game. Also, the cheeses can serve as the in-game guide for players or indicate where players need to solve puzzles.</p>
-        <img src="Game Design/Cubic Factory/Assets/collectable.png" style="width: 100%; object-fit: contain; background: #f5f5f5; margin-bottom: 24px;" alt="">
+        <img src="Game Design/Cubic Factory/Assets/lv3_2.png" style="width: 100%; object-fit: contain; background: #f5f5f5; margin-bottom: 24px;" alt="">
 
         <!-- Level Design -->
         <h2 class="section-title">Level Design & Puzzle Design</h2>
 
         <p class="sub-title">Tutorial Level</p>
         <p class="content-text">We design the first room as our tutorial level. Here is the paper design of the tutorial level.</p>
-        <img src="Game Design/Cubic Factory/Assets/lv_tutorial.png" style="width: 100%; object-fit: contain; background: #f5f5f5; margin-bottom: 8px;" alt="">
+        <img src="Game Design/Cubic Factory/Assets/cubic fac_lvtut.png" style="width: 100%; object-fit: contain; background: #f5f5f5; margin-bottom: 8px;" alt="">
         <ol>
             <li>The brown boxes are the cans for players to interact with.</li>
             <li>Green arrow is the starting point.</li>
@@ -235,7 +241,7 @@
 
         <p class="sub-title">Level 1 (Electricity & Conveyor Belt)</p>
         <p class="content-text">The first level can teach players to learn the uses and dangers of electricity. Also, level 1 will introduce the conveyor belts to players.</p>
-        <img src="Game Design/Cubic Factory/Assets/lv1.png" style="width: 100%; object-fit: contain; background: #f5f5f5; margin-bottom: 8px;" alt="">
+        <img src="Game Design/Cubic Factory/Assets/cubic fac_lv1.png" style="width: 100%; object-fit: contain; background: #f5f5f5; margin-bottom: 8px;" alt="">
         <ol>
             <li>All the brown square boxes are the normal boxes for players to push or pull.</li>
             <li>The yellow box is the conductive box.</li>
@@ -249,7 +255,7 @@
 
         <p class="sub-title">Level 2 (More Electricity & Conveyor Belt)</p>
         <p class="content-text">In this level, we want players to get familiar with the conveyor belts in the food factory.</p>
-        <img src="Game Design/Cubic Factory/Assets/lv2.png" style="width: 100%; object-fit: contain; background: #f5f5f5; margin-bottom: 8px;" alt="">
+        <img src="Game Design/Cubic Factory/Assets/cubic fac_lv2.png" style="width: 100%; object-fit: contain; background: #f5f5f5; margin-bottom: 8px;" alt="">
         <ol>
             <li>The yellow circle with an electric sign inside is the power station of different interactable objects: doors & conveyor belts.</li>
             <li>Blue arrow shows the direction of the conveyor belt.</li>
@@ -261,8 +267,8 @@
         <p class="sub-title">Level 3 (Final Level)</p>
         <p class="content-text">This is the final level of the game. This level includes all the mechanics that were introduced in previous levels. Also, it introduces a new feature: the Food Processing Machinery. When a non-conductive item enters this machine, the machine will package the item. After being wrapped in metallic packaging, the item will become conductive.</p>
         <div class="two-col">
-            <img src="Game Design/Cubic Factory/Assets/lv3_1.png" alt="">
-            <img src="Game Design/Cubic Factory/Assets/lv3_2.png" alt="">
+            <img src="Game Design/Cubic Factory/Assets/cubic fac_lv3_1.png" alt="">
+            <img src="Game Design/Cubic Factory/Assets/cubic fac_lv3_2.png" alt="">
         </div>
 
         <!-- Environment Design -->
@@ -270,62 +276,59 @@
 
         <p class="sub-title">Visual Occlusion</p>
         <p class="content-text">We utilize visual occlusion effects to enhance the visual experience of our level environments for players. As shown below, we've designed certain black areas (black mist) to visually occlude elements within the level environment. The benefit of this approach is that it divides the level into distinct regions, guiding players to learn new game mechanics and fully explore each area.</p>
-        <img src="Game Design/Cubic Factory/Assets/visual_occlusion.gif" style="width: 100%; margin-bottom: 24px;" alt="">
+        <img src="Game Design/Cubic Factory/Assets/visualocclusion.gif" style="width: 100%; margin-bottom: 24px;" alt="">
 
         <p class="sub-title">The Grid</p>
         <p class="content-text">To help players better plan the steps needed to push each box in the level environment, we outline the edges of each grid when designing the game scene's floor. This allows players to better strategize how to use the items within the level environment to progress.</p>
-        <img src="Game Design/Cubic Factory/Assets/the_grid.jpg" style="width: 100%; object-fit: contain; background: #f5f5f5; margin-bottom: 24px;" alt="">
+        <img src="Game Design/Cubic Factory/Assets/the grid_cf.jpg" style="width: 100%; object-fit: contain; background: #f5f5f5; margin-bottom: 24px;" alt="">
 
         <!-- UI -->
         <h2 class="section-title">UI</h2>
 
         <p class="sub-title">Main Menu</p>
         <div class="two-col">
-            <img src="Game Design/Cubic Factory/Assets/ui_1.png" alt="">
-            <img src="Game Design/Cubic Factory/Assets/ui_2.jpg" alt="">
+            <img src="Game Design/Cubic Factory/Assets/ui_1_cf.png" alt="">
+            <img src="Game Design/Cubic Factory/Assets/ui_2_cf.jpg" alt="">
         </div>
 
         <p class="sub-title">In-Game UI</p>
         <p class="content-text">The UI in the top right corner displays the player's current collection of cheese and the total number of cheese in the level. The UI in the top left corner is the pause menu.</p>
-        <img src="Game Design/Cubic Factory/Assets/ingame_ui.png" style="width: 100%; object-fit: contain; background: #f5f5f5; margin-bottom: 24px;" alt="">
+        <img src="Game Design/Cubic Factory/Assets/ingame ui_cf.png" style="width: 100%; object-fit: contain; background: #f5f5f5; margin-bottom: 24px;" alt="">
 
         <p class="sub-title">Indicator</p>
         <p class="content-text">"Space" is the button for players to interact with any objects in the game. When the player approaches the objects that can be interacted with, an indicator will show. "F" is the button for players to interact with triggers on the map.</p>
-        <div class="two-col">
-            <div>
-                <img src="Game Design/Cubic Factory/Assets/space_indicator.gif" style="width: 100%;" alt="">
-                <p class="caption">When players approach the box, a "Space" indicator will display.</p>
+        <div class="carousel" id="carousel-indicator">
+            <div class="carousel-track">
+                <img src="Game Design/Cubic Factory/Assets/spaceindicator.gif" alt="" data-caption='When players approach the box, a "Space" indicator will display.'>
+                <img src="Game Design/Cubic Factory/Assets/F_indicator.gif" alt="" data-caption='When players approach the trigger, a "F" indicator will display.'>
             </div>
-            <div>
-                <img src="Game Design/Cubic Factory/Assets/f_indicator.gif" style="width: 100%;" alt="">
-                <p class="caption">When players approach the trigger, a "F" indicator will display.</p>
-            </div>
+            <button class="carousel-btn prev" onclick="moveCarousel('carousel-indicator', -1)">&#8249;</button>
+            <button class="carousel-btn next" onclick="moveCarousel('carousel-indicator', 1)">&#8250;</button>
+            <div class="carousel-dots" id="dots-carousel-indicator"></div>
         </div>
+        <p class="caption" id="caption-carousel-indicator">When players approach the box, a "Space" indicator will display.</p>
 
         <p class="sub-title">Pause Menu</p>
         <p class="content-text">When the pause menu is open, there are three options: "Resume Game," "Retry," and "Exit to Main Menu." Choosing "Retry" allows the player to replay the current level.</p>
-        <img src="Game Design/Cubic Factory/Assets/pause_menu.png" style="width: 100%; object-fit: contain; background: #f5f5f5; margin-bottom: 16px;" alt="">
+        <img src="Game Design/Cubic Factory/Assets/pauseMenu_Cf.png" style="width: 100%; object-fit: contain; background: #f5f5f5; margin-bottom: 16px;" alt="">
 
         <p class="sub-title">End Scene</p>
         <p class="content-text">When the game is finished, here is what the end scene looks like. Players can return to the start menu.</p>
-        <img src="Game Design/Cubic Factory/Assets/end_scene.png" style="width: 100%; object-fit: contain; background: #f5f5f5; margin-bottom: 24px;" alt="">
+        <img src="Game Design/Cubic Factory/Assets/Endscene_cf.png" style="width: 100%; object-fit: contain; background: #f5f5f5; margin-bottom: 24px;" alt="">
 
         <!-- Reference -->
         <h2 class="section-title">Reference</h2>
-        <div class="three-col">
-            <div>
-                <img src="Game Design/Cubic Factory/Assets/ref_chucks.png" alt="">
-                <p class="caption">Chuck's Challenge 3D 2020</p>
+        <div class="carousel" id="carousel-reference">
+            <div class="carousel-track">
+                <img src="Game Design/Cubic Factory/Assets/chucks challenge.png" alt="" data-caption="Chuck's Challenge 3D 2020">
+                <img src="Game Design/Cubic Factory/Assets/can of wormholes.jpg" alt="" data-caption="Can of Wormholes">
+                <img src="Game Design/Cubic Factory/Assets/chips challenge.png" alt="" data-caption="Chip's Challenge">
             </div>
-            <div>
-                <img src="Game Design/Cubic Factory/Assets/ref_wormholes.jpg" alt="">
-                <p class="caption">Can of Wormholes</p>
-            </div>
-            <div>
-                <img src="Game Design/Cubic Factory/Assets/ref_chips.png" alt="">
-                <p class="caption">Chip's Challenge</p>
-            </div>
+            <button class="carousel-btn prev" onclick="moveCarousel('carousel-reference', -1)">&#8249;</button>
+            <button class="carousel-btn next" onclick="moveCarousel('carousel-reference', 1)">&#8250;</button>
+            <div class="carousel-dots" id="dots-carousel-reference"></div>
         </div>
+        <p class="caption" id="caption-carousel-reference">Chuck's Challenge 3D 2020</p>
 
     </div>
 
@@ -357,6 +360,10 @@
             track.style.transform = `translateX(-${current * 100}%)`;
             const dots = document.querySelectorAll(`#dots-${id} span`);
             dots.forEach((d, i) => d.classList.toggle('active', i === current));
+            const captionEl = document.getElementById(`caption-${id}`);
+            if (captionEl && imgs[current].dataset.caption) {
+                captionEl.textContent = imgs[current].dataset.caption;
+            }
         }
 
         function openLightbox(src) {

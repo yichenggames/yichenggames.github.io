@@ -1,9 +1,0 @@
-According to the background story, our game’s character will be a cute little mouse, Robin.
-
-Art reference:
-We use the character in the overcooked as our character's reference.
-
-Character animation:
-Push
-Pull
-Movement(Walk)

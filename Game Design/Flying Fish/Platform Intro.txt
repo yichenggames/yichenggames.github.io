@@ -1,2 +1,0 @@
-Platform Intro
-The Icaros, as known as Flying Chair, is the platform that need players use their whole body as the input in the game. Also, normally people design a game by using Icaros is about Virtual Reality Game. However, our team design a PC game and this game is more like a "fitness game" because player needs to control the jump and direction of the fish. It is hard to control for the player who is the first time to experience our game.

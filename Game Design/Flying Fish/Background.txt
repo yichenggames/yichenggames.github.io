@@ -1,7 +1,0 @@
-Background
-
-Main Story:
-Once upon a day, a little fish whose name is Jumpy is laying on the beach with his lovely hat. Suddenly, the wind starts blowing. Jumpy’s hat just fly away from his head. Our poor jumpy lost his favorite hat and feels sad. Now, it is your turn to help Jumpy to get his hat back. How will you help him?
-
-Background of the world:
-The idea of flying fish is come from the fish called Mudskipper. This kind of fish can jump on the ground or mud. Because we are using Flying Chair as this project’s platform. The idea is based on Mudskipper which player can control the jumping or flying of the fish in the game.

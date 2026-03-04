@@ -1,3 +1,0 @@
-Abstract
-
-Flying Fish is a funny casual game which platform is the Icaros (flying chair). Player needs to be lay on the flying chair and control the angel and the power to shoot the fish. The game goal is help the fish to get his hat because his hat is escaping randomly in the game world.

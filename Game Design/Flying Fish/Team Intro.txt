@@ -1,2 +1,0 @@
-Team Intro
-This is a group project made by me and my teammates during the Build Virtual World (the course in Carnegie Mellon University Entertainment Technology Center) course. Our team has 5 students. 1 sound designer, 2 artists and 2 programmers. In this course, I learned about how the teamwork project looks like and the whole pipeline in the game industry. I am the programmer and the game designer in my team. My majority job is thinking about the game features and game flow, also, I need to code the whole game world.
