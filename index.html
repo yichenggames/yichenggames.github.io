@@ -290,7 +290,7 @@
             </h3>
             <p style="font-size: 0.85rem; color: #888; margin: 0 0 16px;">10.2025</p>
             <a href="https://youtu.be/jOUaANpF8DE" target="_blank" style="display: block; position: relative; cursor: pointer;">
-                <img src="https://img.youtube.com/vi/jOUaANpF8DE/maxresdefault.jpg"
+                <img class="yt-thumbnail" src="https://img.youtube.com/vi/jOUaANpF8DE/maxresdefault.jpg"
                      alt="Gameplay Demo"
                      style="width: 100%; display: block;">
                 <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 72px; height: 72px; background: rgba(255,0,0,0.85); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
@@ -306,7 +306,7 @@
             </h3>
             <p style="font-size: 0.85rem; color: #888; margin: 0 0 16px;">11.2025</p>
             <a href="https://youtu.be/kupuqQrF6fk" target="_blank" style="display: block; position: relative; cursor: pointer;">
-                <img src="https://img.youtube.com/vi/kupuqQrF6fk/maxresdefault.jpg"
+                <img class="yt-thumbnail" src="https://img.youtube.com/vi/kupuqQrF6fk/maxresdefault.jpg"
                      alt="Gameplay Demo"
                      style="width: 100%; display: block;">
                 <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 72px; height: 72px; background: rgba(255,0,0,0.85); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
@@ -322,7 +322,7 @@
             </h3>
             <p style="font-size: 0.85rem; color: #888; margin: 0 0 16px;">EmberGen + UE Niagara · 12.2025</p>
             <a href="https://youtu.be/MgqeZqbZQxc" target="_blank" style="display: block; position: relative; cursor: pointer;">
-                <img src="https://img.youtube.com/vi/MgqeZqbZQxc/maxresdefault.jpg"
+                <img class="yt-thumbnail" src="https://img.youtube.com/vi/MgqeZqbZQxc/maxresdefault.jpg"
                      alt="Gameplay Demo"
                      style="width: 100%; display: block;">
                 <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 72px; height: 72px; background: rgba(255,0,0,0.85); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
@@ -435,6 +435,10 @@
             dots.forEach((d, i) => d.classList.toggle('active', i === current));
         }
 
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+        }
+
         document.addEventListener('DOMContentLoaded', () => {
             document.querySelectorAll('.carousel').forEach(carousel => {
                 const id = carousel.id;
@@ -451,8 +455,25 @@
                     dotsContainer.appendChild(dot);
                 });
             });
+            
+            // Lightbox for all images
+            document.querySelectorAll('img:not(#lightbox-img):not(.yt-thumbnail)').forEach(img => {
+                img.style.cursor = 'zoom-in';
+                img.addEventListener('click', () => {
+                    document.getElementById('lightbox-img').src = img.src;
+                    document.getElementById('lightbox').classList.add('active');
+                });
+            });
         });
     </script>
+
+    <!-- Lightbox -->
+    <div id="lightbox" onclick="closeLightbox()" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); z-index:9999; justify-content:center; align-items:center; cursor:pointer;">
+        <img id="lightbox-img" src="" alt="" style="max-width:90%; max-height:90vh; object-fit:contain;">
+    </div>
+    <style>
+        #lightbox.active { display: flex !important; }
+    </style>
 
 </body>
 </html>
