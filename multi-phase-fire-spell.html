@@ -108,27 +108,27 @@
             <li>An ash emitter to simulate embers and ash particles generated during combustion.</li>
         </ol>
         <p class="content-text">One of the key challenges in this stage was making the flame dissipation and erosion feel natural. While the UV map provided some base-level erosion, the effect wasn't convincing enough on its own.</p>
-        <p class="content-text">To achieve a more organic flame fade-out, I modified the material using a combination of <strong>Subtract</strong> and <strong>Saturate</strong> nodes. This setup allowed the normalized age of the particle to interact with the alpha values of the texture, effectively controlling the particle's opacity over time.</p>
-        <p class="content-text">Additionally, I used the <strong>Dynamic Material Parameters</strong> module within the particle system to drive the erosion effect. By assigning a custom curve to the normalized age and introducing randomized values per particle, I was able to create a more varied and believable flame dissipation, avoiding overly uniform fading behavior.</p>
-        <img src="VFX/Fire Spell/Assets/phase1.png" style="width: 100%; object-fit: contain; background: #f5f5f5; margin-bottom: 8px;" alt="">
+        <p class="content-text">To achieve a more organic flame fade-out, I modified the material using a combination of <span style="color: #c0392b; font-weight: 700;">Subtract</span> and <span style="color: #c0392b; font-weight: 700;">Saturate</span> nodes. This setup allowed the normalized age of the particle to interact with the alpha values of the texture, effectively controlling the particle's opacity over time.</p>
+        <p class="content-text">Additionally, I used the <span style="color: #c0392b; font-weight: 700;">Dynamic Material Parameters</span> module within the particle system to drive the erosion effect. By assigning a custom curve to the normalized age and introducing randomized values per particle, I was able to create a more varied and believable flame dissipation, avoiding overly uniform fading behavior.</p>
+        <img src="VFX/Multi-Phase/1st_stage_fire.gif" style="width: 100%; margin-bottom: 8px;" alt="">
         <p class="caption">Phase 1 — Initial Ignition & Burning</p>
 
         <hr class="section-divider">
 
         <!-- Phase 2 -->
         <h2 class="section-title">Phase 2 — Accelerated Burning</h2>
-        <p class="content-text">The second stage of the fireball effect is relatively straightforward. In this phase, I created a <strong>User Parameter</strong> to enable external control — primarily from Blueprints — over the main body of the black fire.</p>
+        <p class="content-text">The second stage of the fireball effect is relatively straightforward. In this phase, I created a <span style="color: #c0392b; font-weight: 700;">User Parameter</span> to enable external control — primarily from Blueprints — over the main body of the black fire.</p>
         <p class="content-text">This User Parameter, named <code>second_phase</code>, is a customizable float value that drives several key properties of the emitter, including:</p>
         <ul>
             <li>Velocity</li>
             <li>Particle lifetime</li>
         </ul>
         <p class="content-text">As shown in the setup below, the "B" input of the Lifetime module is driven by this <code>second_phase</code> parameter. This setup allows for dynamic adjustment of the black fire's behavior during runtime, enabling greater flexibility and interactivity in the visual effect.</p>
-        <img src="VFX/Fire Spell/Assets/2nd_phase_fire.png" style="width: 80%; display: block; margin: 0 auto 8px;" alt="">
+        <img src="VFX/Multi-Phase/2nd_phase_fire.png" style="width: 80%; display: block; margin: 0 auto 8px;" alt="">
         <p class="caption">User Parameter driving Lifetime in Phase 2</p>
 
-        <p class="content-text">To make the ash particle sizes more random — with a bias toward smaller particles — I adjusted the <strong>Sprite Size curve</strong>. Since Normalized Age is always 0 in Initialize Particle, I changed the Curve Index from Normalized Age to <strong>Random Range Float</strong>. This allows the curve's X-axis to sample random values between 0 and 1. By shaping the curve to favor smaller values, I achieved a more natural scattering effect with more small particles and occasional larger ones.</p>
-        <img src="VFX/Fire Spell/Assets/2nd_phase_fire_2.png" style="width: 40%; display: block; margin: 0 auto 8px;" alt="">
+        <p class="content-text">To make the ash particle sizes more random — with a bias toward smaller particles — I adjusted the <span style="color: #c0392b; font-weight: 700;">Sprite Size curve</span>. Since Normalized Age is always 0 in Initialize Particle, I changed the Curve Index from Normalized Age to <span style="color: #c0392b; font-weight: 700;">Random Range Float</span>. This allows the curve's X-axis to sample random values between 0 and 1. By shaping the curve to favor smaller values, I achieved a more natural scattering effect with more small particles and occasional larger ones.</p>
+        <img src="VFX/Multi-Phase/2nd_phase_fire_2.png" style="width: 40%; display: block; margin: 0 auto 8px;" alt="">
         <p class="caption">Sprite Size curve using Random Range Float</p>
 
         <hr class="section-divider">
@@ -142,16 +142,22 @@
             <li>Original material used Subtract for soft erosion; for flight, I needed a sharper black edge</li>
             <li>Enhanced edge contrast by:
                 <ul>
-                    <li>Adding a <strong>Power</strong> node to sharpen the falloff</li>
+                    <li>Adding a <span style="color: #c0392b; font-weight: 700;">Power</span> node to sharpen the falloff</li>
                     <li>Creating a new Particle Parameter to control the Power value dynamically</li>
                 </ul>
             </li>
         </ol>
-        <div class="two-col">
-            <img src="VFX/Fire Spell/Assets/phase3_1.png" alt="">
-            <img src="VFX/Fire Spell/Assets/phase3_2.png" alt="">
+        <div class="carousel" id="carousel-phase3">
+            <div class="carousel-track">
+                <img src="VFX/Multi-Phase/3rd_phase_material.png" alt="">
+                <img src="VFX/Multi-Phase/3rd_phase_power.png" alt="">
+            </div>
+            <button class="carousel-btn prev" onclick="moveCarousel('carousel-phase3', -1)">&#8249;</button>
+            <button class="carousel-btn next" onclick="moveCarousel('carousel-phase3', 1)">&#8250;</button>
+            <div class="carousel-dots" id="dots-carousel-phase3"></div>
         </div>
-        <p class="content-text">To sharpen the black edge, I applied a Power operation to the texture's alpha channel. Using a Power value less than 1 reduces soft falloff and makes the edge more defined. This enhances the rim contrast during flight.</p>
+        <p class="content-text">To sharpen the black edge, I applied a Power operation to the texture's alpha channel. Using a Power value <span style="color: #c0392b; font-weight: 700;">less than 1</span> reduces soft falloff and makes the edge more defined. This enhances the rim contrast during flight.</p>
+        <img src="VFX/Multi-Phase/3rd_phase_result.gif" alt="">
 
         <hr class="section-divider">
 
@@ -163,32 +169,39 @@
             <li><strong>Visual Behavior:</strong> As white particles scatter outward, they gradually grow in size and shift to black.</li>
             <li><strong>Scale Velocity:</strong> Created a User Parameter to control Scale Velocity inside the Particle Update stage. All XYZ values in Scale Velocity are driven by this parameter, which can be adjusted in Blueprint.</li>
         </ul>
-        <img src="VFX/Fire Spell/Assets/4th_phase_velocity.png" style="width: 100%; object-fit: contain; background: #f5f5f5; margin-bottom: 8px;" alt="">
+        <img src="VFX/Multi-Phase/4th_phase_velocity.png" style="width: 100%; object-fit: contain; background: #f5f5f5; margin-bottom: 8px;" alt="">
         <p class="caption">Scale Velocity driven by User Parameter</p>
 
-        <p class="sub-title">Scratch Module Logic:</p>
+        <p class="sub-title">Scratch Module Logic</p>
         <ul>
-            <li><strong>Color Shift Based on Distance:</strong> Used a Scratch Module to check distance between each Particle Position and Emitter Position. Used a Distance node, then applied If/Select logic:
-                <ul>
+            <li><strong>Color Shift Based on Distance</strong><br>Used a Scratch Module to check distance between each Particle Position and Emitter Position.<br>Used a Distance node, then applied If/Select logic:
+                <ul style="margin-bottom: 0;">
                     <li>If distance > threshold → set particle color to black</li>
                     <li>Else → keep original color</li>
                 </ul>
+                Final result goes to the Particle Color output.
             </li>
-            <li><strong>Size Increase Based on Distance:</strong> As particles move outward, their size increases based on distance. To avoid uncontrolled growth, the distance is multiplied by a small float before being added to size. If distance > threshold → increase size; else → keep original size.</li>
+            <li><strong>Size Increase Based on Distance</strong><br>As particles move outward, their size increases based on distance.<br>To avoid uncontrolled growth, the distance is multiplied by a small float before being added to size.
+                <ul style="margin-bottom: 0;">
+                    <li>If distance > threshold → increase size;</li>
+                    <li>Else → keep original size.</li>
+                </ul>
+            </li>Final result goes to the Particle Size output.
         </ul>
-        <img src="VFX/Fire Spell/Assets/4th_phase_scratchmodule.png" style="width: 100%; object-fit: contain; background: #f5f5f5; margin-bottom: 8px;" alt="">
+        <img src="VFX/Multi-Phase/4th_phase_scratchmodule.png" style="width: 100%; object-fit: contain; background: #f5f5f5; margin-bottom: 8px;" alt="">
         <p class="caption">Scratch Module for color and size logic</p>
 
         <p class="sub-title">Explosion Emitter Layers:</p>
         <ul>
-            <li><strong>Explosion Beams</strong> (start at 0.0s) — Thin, stretched beam particles, aligned with velocity direction (Sprite Renderer → Alignment → Velocity Aligned)</li>
-            <li><strong>Explosion Rings — Black & White</strong> (start at 0.1s) — Two material instances to control dissipation. White ring is smaller than black ring; white flame fades into black by using Scale Color. Rendering order: White ring = 1, Black ring = 0</li>
-            <li><strong>Explosion Embers</strong> (start at 0.0s) — Used to add heat residue and dynamic glow</li>
-            <li><strong>Explosion Refraction</strong> (start at 0.0s) — Adds a heatwave/distortion effect for visual realism</li>
-            <li><strong>Explosion Smoke</strong> (starts at ~0.25–0.4s) — Flipbook handles fade and color internally</li>
+            <li><span style="color: #c0392b; font-weight: 700;">Explosion Beams</span> (start at 0.0s) — Thin, stretched beam particles, aligned with velocity direction (Sprite Renderer → Alignment → Velocity Aligned)</li>
+            <li><span style="color: #c0392b; font-weight: 700;">Explosion Rings — Black & White</span> (start at 0.1s) — Two material instances to control dissipation. White ring is smaller than black ring; white flame fades into black by using Scale Color. Rendering order: White ring = 1, Black ring = 0</li>
+            <li><span style="color: #c0392b; font-weight: 700;">Explosion Embers</span> (start at 0.0s) — Used to add heat residue and dynamic glow</li>
+            <li><span style="color: #c0392b; font-weight: 700;">Explosion Refraction</span> (start at 0.0s) — Adds a heatwave/distortion effect for visual realism</li>
+            <li><span style="color: #c0392b; font-weight: 700;">Explosion Smoke</span> (starts at ~0.25–0.4s) — Flipbook handles fade and color internally</li>
         </ul>
-        <img src="VFX/Fire Spell/Assets/4th_phase_emitters.png" style="width: 100%; object-fit: contain; background: #f5f5f5; margin-bottom: 8px;" alt="">
+        <img src="VFX/Multi-Phase/4th_phase_emitters.png" style="width: 100%; object-fit: contain; background: #f5f5f5; margin-bottom: 8px;" alt="">
         <p class="caption">Explosion emitter layers overview</p>
+        <img src="VFX/Multi-Phase/4th_phase_explosion.gif" style="width: 100%; object-fit: contain; background: #f5f5f5; margin-bottom: 8px;" alt="">
 
         <hr class="section-divider">
 
@@ -216,23 +229,23 @@
         </ul>
         <div class="two-col">
             <div>
-                <img src="VFX/Fire Spell/Assets/refraction_issue_1.png" alt="">
+                <img src="VFX/Multi-Phase/refraction_issue_1.png" alt="">
                 <p class="caption">Refraction Issue</p>
             </div>
             <div>
-                <img src="VFX/Fire Spell/Assets/refraction_result.png" alt="">
+                <img src="VFX/Multi-Phase/refraction_result.png" alt="">
                 <p class="caption">Refraction Result</p>
             </div>
         </div>
 
         <p class="content-text">In Niagara, I noticed the refraction ripple disappears abruptly. This is because the material's Alpha is always 0, so the Scale Color Alpha curve doesn't affect visibility.</p>
-        <p class="content-text">To fix this, I used a <strong>Lerp</strong> node to blend between:</p>
+        <p class="content-text">To fix this, I used a <span style="color: #c0392b; font-weight: 700;">Lerp</span> node to blend between:</p>
         <ul>
             <li>A normal ripple texture (bumpy for refraction)</li>
             <li>A flat normal map (pure blue, no refraction)</li>
         </ul>
         <p class="content-text">The Lerp is driven by the Particle Alpha from the emitter. As the particle's alpha fades (via the Scale Color curve), the material smoothly transitions from ripple to flat normal, achieving a natural fade-out of the refraction effect.</p>
-        <img src="VFX/Fire Spell/Assets/refraction_material.png" style="width: 100%; object-fit: contain; background: #f5f5f5; margin-bottom: 8px;" alt="">
+        <img src="VFX/Multi-Phase/refraction_material.png" style="width: 100%; object-fit: contain; background: #f5f5f5; margin-bottom: 8px;" alt="">
         <p class="caption">Refraction material setup with Lerp node</p>
 
         <hr class="section-divider">
@@ -241,9 +254,9 @@
         <p class="sub-title">EmberGen Flipbooks</p>
         <p class="content-text">All the flipbook textures used in Unreal 5 Niagara System are made by EmberGen.</p>
         <div class="three-col">
-            <img src="VFX/Fire Spell/Assets/embergen_1.png" alt="">
-            <img src="VFX/Fire Spell/Assets/embergen_2.png" alt="">
-            <img src="VFX/Fire Spell/Assets/embergen_3.png" alt="">
+            <img src="VFX/Multi-Phase/flipbook of blackfire.png" alt="">
+            <img src="VFX/Multi-Phase/flipbook of flying.png" alt="">
+            <img src="VFX/Multi-Phase/flipbook_example.png" alt="">
         </div>
 
     </div>
@@ -266,6 +279,18 @@
     </div>
 
     <script>
+
+        function moveCarousel(id, dir) {
+            const carousel = document.getElementById(id);
+            const track = carousel.querySelector('.carousel-track');
+            const imgs = track.querySelectorAll('img');
+            let current = parseInt(track.dataset.current || 0);
+            current = (current + dir + imgs.length) % imgs.length;
+            track.dataset.current = current;
+            track.style.transform = `translateX(-${current * 100}%)`;
+            const dots = document.querySelectorAll(`#dots-${id} span`);
+            dots.forEach((d, i) => d.classList.toggle('active', i === current));
+        }
         function openLightbox(src) {
             document.getElementById('lightbox-img').src = src;
             document.getElementById('lightbox').classList.add('active');
@@ -277,6 +302,21 @@
             document.querySelectorAll('img:not(.lightbox img)').forEach(img => {
                 img.style.cursor = 'zoom-in';
                 img.onclick = () => openLightbox(img.src);
+            });
+            document.querySelectorAll('.carousel').forEach(carousel => {
+                const id = carousel.id;
+                const imgs = carousel.querySelectorAll('img');
+                const dotsContainer = document.getElementById(`dots-${id}`);
+                if (!dotsContainer) return;
+                imgs.forEach((_, i) => {
+                    const dot = document.createElement('span');
+                    if (i === 0) dot.classList.add('active');
+                    dot.onclick = () => {
+                        carousel.querySelector('.carousel-track').dataset.current = i - 1;
+                        moveCarousel(id, 1);
+                    };
+                    dotsContainer.appendChild(dot);
+                });
             });
         });
     </script>
