@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explosion & Destruction | Yicheng Lu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; margin: 0; padding: 0; color: #333; line-height: 1.6; background: #fff; font-weight: 500; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
+        header { text-align: center; padding: 40px 0 10px; background-color: #f9f9f9; }
+        header h1 { font-size: 2rem; letter-spacing: 5px; margin: 0; font-weight: 700; }
+        header p { font-size: 0.9rem; letter-spacing: 8px; color: #666; margin-top: 4px; }
+        nav { background-color: #f9f9f9; display: flex; justify-content: center; gap: 160px; padding: 20px 0 40px; border-bottom: 1px solid #f0f0f0; }
+        nav a { text-decoration: none; color: #888; font-size: 1.0rem; transition: 0.3s; }
+        nav a:hover { color: #333; }
+        .back-btn { display: inline-block; margin: 30px 0 10px; color: #888; font-size: 0.9rem; text-decoration: none; }
+        .back-btn:hover { color: #333; }
+        .back-btn i { margin-right: 6px; }
+        .project-header { text-align: center; padding: 40px 0 30px; margin-bottom: 10px; }
+        .project-header h1 { font-size: 2.4rem; font-weight: 700; color: #c0392b; margin: 0; }
+        .project-header p { font-size: 0.85rem; color: #888; margin-top: 8px; }
+        .section-title { font-size: 1.8rem; font-weight: 700; color: #c0392b; margin: 40px 0 10px; }
+        .sub-title { font-size: 1rem; font-weight: 700; color: #c0392b; margin: 20px 0 6px; }
+        .content-text { font-size: 1.05rem; line-height: 1.8; color: #333; margin-bottom: 16px; }
+        .caption { font-size: 0.85rem; color: #888; margin: 6px 0 20px; text-align: center; }
+        ol, ul { font-size: 1.05rem; line-height: 2; color: #333; padding-left: 24px; margin-bottom: 24px; }
+        .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px; }
+        .two-col img { width: 100%; object-fit: contain; background: #f5f5f5; }
+        .three-col { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin-bottom: 16px; }
+        .three-col img { width: 100%; object-fit: contain; background: #f5f5f5; }
+        .carousel { position: relative; overflow: hidden; margin-bottom: 12px; }
+        .carousel-track { display: flex; transition: transform 0.3s ease; }
+        .carousel-track img { min-width: 100%; height: 600px; object-fit: contain; background: #f5f5f5; cursor: zoom-in; }
+        .carousel-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.4); color: white; border: none; padding: 10px 16px; cursor: pointer; font-size: 1.2rem; z-index: 10; }
+        .carousel-btn.prev { left: 8px; }
+        .carousel-btn.next { right: 8px; }
+        .carousel-dots { text-align: center; margin-top: 8px; }
+        .carousel-dots span { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #ccc; margin: 0 4px; cursor: pointer; }
+        .carousel-dots span.active { background: #555; }
+        .lightbox { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 1000; justify-content: center; align-items: center; cursor: pointer; }
+        .lightbox.active { display: flex; }
+        .lightbox img { max-width: 90%; max-height: 90vh; object-fit: contain; }
+        .back-to-top { display: block; text-align: center; margin: 20px auto 40px; color: #888; font-size: 0.9rem; cursor: pointer; }
+        .back-to-top:hover { color: #333; }
+        .footer { text-align: center; padding: 60px 0 30px; border-top: 1px solid #f0f0f0; margin-top: 20px; }
+        .social-links a { color: #333; margin: 0 12px; font-size: 1.2rem; transition: 0.3s; }
+        .social-links a:hover { color: #c0392b; }
+        .copyright { font-size: 0.7rem; color: #aaa; margin-top: 15px; letter-spacing: 1px; }
+        hr.section-divider { border: none; border-top: 1px dotted #ddd; margin: 40px 0; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Yicheng Lu</h1>
+        <p>Personal Portfolio</p>
+    </header>
+
+    <nav>
+        <a href="index.html">About</a>
+        <a href="index.html#level-design">Level Design</a>
+        <a href="index.html#game-design">Game Design</a>
+        <a href="index.html#vfx">VFX Study</a>
+        <a href="index.html#award">Award</a>
+    </nav>
+
+    <div class="container">
+        <a href="index.html#vfx" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Back to VFX Study</a>
+
+        <div class="project-header">
+            <h1>Explosion VFX & Destruction System Study</h1>
+            <p>VFX Study · Unreal Engine 5 · Chaos System · 11.2025</p>
+        </div>
+
+        <!-- Description -->
+        <h2 class="section-title">Description</h2>
+        <p class="content-text">This project focuses on creating a realistic explosion VFX in Unreal Engine 5, and combining it with UE5's built-in Chaos Fracture system to simulate realistic destruction effects. The goal was to explore how to sync explosive visuals with mesh breaking behavior, resulting in a dynamic and cinematic VFX scene.</p>
+
+        <!-- Result -->
+        <h2 class="section-title">Result</h2>
+        <a href="https://youtu.be/kupuqQrF6fk" target="_blank" style="display: block; position: relative; margin-bottom: 20px;">
+            <img src="https://img.youtube.com/vi/kupuqQrF6fk/maxresdefault.jpg" style="width: 100%; display: block;" alt="Explosion & Destruction Result">
+            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 70px; height: 70px; background: rgba(255,0,0,0.85); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                <div style="width: 0; height: 0; border-top: 18px solid transparent; border-bottom: 18px solid transparent; border-left: 28px solid white; margin-left: 6px;"></div>
+            </div>
+        </a>
+
+        <hr class="section-divider">
+
+        <!-- Workflow Overview -->
+        <h2 class="section-title">Workflow Overview</h2>
+        <ol>
+            <li>Used the Chaos System to create a pre-fractured ground mesh</li>
+            <li>Applied a radial force field to trigger the fracture and simulate debris scattering after the explosion</li>
+            <li>Created custom explosion VFX and smoke trail VFX for flying debris</li>
+            <li>Controlled the entire sequence using a Blueprint-triggered explosion</li>
+            <li>Added animation timing to present the final explosion as a cinematic moment</li>
+        </ol>
+
+        <hr class="section-divider">
+
+        <!-- Chaos System -->
+        <h2 class="section-title">Chaos System</h2>
+        <p class="sub-title">Fracture Setup — Chaos Hierarchical Clustering</p>
+
+        <p class="sub-title" style="color: #555; font-weight: 600;">1. Hierarchical Fracture Levels</p>
+        <ul>
+            <li>Level 0: Whole ground mesh</li>
+            <li>Level 1: Break into large chunks</li>
+            <li>Level 2+: Further subdivide into smaller pieces</li>
+        </ul>
+
+        <p class="sub-title" style="color: #555; font-weight: 600;">2. Clustering with Auto Mode</p>
+        <ul>
+            <li>Used Cluster → Auto to automatically organize fragments into levels</li>
+            <li>Level 1: Cluster Sites = 200</li>
+            <li>Level 2: Auto-generated from remaining pieces</li>
+            <li>Level 3: Cluster Sites = 75</li>
+            <li>Level 4: Cluster Sites = 50</li>
+        </ul>
+
+        <div class="carousel" id="carousel-chaos">
+            <div class="carousel-track">
+                <img src="VFX/Explo_Destruction/chaos system_1.png" alt="" data-caption="Chaos Fracture Setup">
+                <img src="VFX/Explo_Destruction/chaos system_2.png" alt="" data-caption="Fracture Levels">
+                <img src="VFX/Explo_Destruction/chaos system_3.png" alt="" data-caption="Damage Threshold Setting">
+            </div>
+            <button class="carousel-btn prev" onclick="moveCarousel('carousel-chaos', -1)">&#8249;</button>
+            <button class="carousel-btn next" onclick="moveCarousel('carousel-chaos', 1)">&#8250;</button>
+            <div class="carousel-dots" id="dots-carousel-chaos"></div>
+        </div>
+        <p class="caption" id="caption-carousel-chaos">Chaos Fracture Setup</p>
+
+        <p class="sub-title">Damage Settings for Fracture Activation</p>
+        <p class="content-text">In the Details → Damage panel, each Index corresponds to a fracture level. Index 0 applies damage to Level 1, Index 1 to Level 2, and so on. Since there are 4 fracture levels, set up Index 0–3 to control how each layer reacts to impact or force.</p>
+
+        <hr class="section-divider">
+
+        <!-- Performance Optimization -->
+        <h2 class="section-title">Performance Optimization</h2>
+        <ul>
+            <li>Used <strong>Tiny Geo</strong> to merge extremely small fragments, reducing overall complexity</li>
+            <li>Before optimization: <strong>1500+ fragments</strong></li>
+            <li>After optimization: <strong>914 fragments</strong>, significantly improving performance</li>
+        </ul>
+        <div class="two-col">
+            <img src="VFX/Explo_Destruction/tiny geo upgrade_1.png" alt="">
+            <img src="VFX/Explo_Destruction/tiny geo upgrade_2.png" alt="">
+        </div>
+
+        <hr class="section-divider">
+
+        <!-- Chaos System - Force Field -->
+        <h2 class="section-title">Chaos System — Force Field</h2>
+
+        <p class="sub-title">FS_MasterField</p>
+        <p class="content-text">UE5 Blueprint force field that applies custom directional forces to fractured meshes. In Field Settings, enable <strong>Apply Directional Vector</strong> to push debris upward. Adjust Magnitude to control the explosion force strength.</p>
+        <img src="VFX/Explo_Destruction/fp_masterfield.png" style="width: 60%; display: block; margin: 0 auto 8px;" alt="">
+        <p class="caption">FS_MasterField setup</p>
+
+        <p class="sub-title">FS_SleepDisable_Generic</p>
+        <p class="content-text">After the explosion, debris may keep shaking due to ongoing force influence. This Blueprint helps stabilize debris by applying a sleep condition. Set to Sleep Mode: fragments entering the field will stop simulating once below a motion threshold.</p>
+        <img src="VFX/Explo_Destruction/fs_sleepdisable_generic.png" style="width: 60%; display: block; margin: 0 auto 8px;" alt="">
+        <p class="caption">FS_SleepDisable_Generic setup</p>
+
+        <hr class="section-divider">
+
+        <!-- Explosion VFX & Smoke Trail VFX -->
+        <h2 class="section-title">Explosion VFX & Smoke Trail VFX</h2>
+        <p class="content-text">To create the explosion effect, the following emitters were used:</p>
+        <ol>
+            <li><strong>Multiple Flame Emitters</strong> — for explosive bursts of fire</li>
+            <li><strong>1 Smoke Emitter</strong> — for post-blast lingering smoke</li>
+            <li><strong>2 Spark Emitters</strong>
+                <ul>
+                    <li>One for mid-air sparks that quickly fade out</li>
+                    <li>One for ground sparks that fall and slowly burn out</li>
+                </ul>
+            </li>
+            <li><strong>Multiple Debris Emitters</strong> — to simulate explosive debris flying outward</li>
+        </ol>
+        <img src="VFX/Explo_Destruction/fracture&explosion emitters result.png" style="width: 100%; object-fit: contain; background: #f5f5f5; margin-bottom: 8px;" alt="">
+        <p class="caption">Explosion emitters overview</p>
+
+        <p class="content-text">In this project, I explored two ways to make one emitter follow another:</p>
+
+        <p class="sub-title">Method 1 — Spawn Particles from Other Emitter</p>
+        <p class="content-text">Directly spawns particles from the location of another emitter.</p>
+        <img src="VFX/Explo_Destruction/2 methods to realize the particle follow_1.png" style="width: 55%; display: block; margin: 0 auto 8px;" alt="">
+        <p class="caption">Spawn Particles from Other Emitter</p>
+
+        <p class="sub-title">Method 2 — Event Handler Method</p>
+        <ul>
+            <li>In the source emitter (A): add a <strong>Generate Location Event</strong></li>
+            <li>In the following emitter (B):
+                <ul>
+                    <li>Add an <strong>Event Handler</strong> module</li>
+                    <li>Set it to Receive Location Event from emitter A</li>
+                </ul>
+            </li>
+            <li>This allows emitter B to dynamically follow emitter A's particle locations</li>
+        </ul>
+        <img src="VFX/Explo_Destruction/2 methods to realize the particle follow_event handler.png" style="width: 55%; display: block; margin: 0 auto 8px;" alt="">
+        <p class="caption">Event Handler Method</p>
+
+    </div>
+
+    <a class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        <i class="fa-solid fa-arrow-up"></i> Back to Top
+    </a>
+
+    <footer class="footer">
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/yicheng-lu-33885a1ba/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+        <div class="copyright">© 2021 by Yicheng Lu.</div>
+    </footer>
+
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img" src="" alt="">
+    </div>
+
+    <script>
+        function moveCarousel(id, dir) {
+            const carousel = document.getElementById(id);
+            const track = carousel.querySelector('.carousel-track');
+            const imgs = track.querySelectorAll('img');
+            let current = parseInt(track.dataset.current || 0);
+            current = (current + dir + imgs.length) % imgs.length;
+            track.dataset.current = current;
+            track.style.transform = `translateX(-${current * 100}%)`;
+            const dots = document.querySelectorAll(`#dots-${id} span`);
+            dots.forEach((d, i) => d.classList.toggle('active', i === current));
+            const captionEl = document.getElementById(`caption-${id}`);
+            if (captionEl && imgs[current].dataset.caption) {
+                captionEl.textContent = imgs[current].dataset.caption;
+            }
+        }
+
+        function openLightbox(src) {
+            document.getElementById('lightbox-img').src = src;
+            document.getElementById('lightbox').classList.add('active');
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.carousel').forEach(carousel => {
+                const id = carousel.id;
+                const imgs = carousel.querySelectorAll('img');
+                const dotsContainer = document.getElementById(`dots-${id}`);
+                if (!dotsContainer) return;
+                imgs.forEach((_, i) => {
+                    const dot = document.createElement('span');
+                    if (i === 0) dot.classList.add('active');
+                    dot.onclick = () => {
+                        carousel.querySelector('.carousel-track').dataset.current = i - 1;
+                        moveCarousel(id, 1);
+                    };
+                    dotsContainer.appendChild(dot);
+                });
+            });
+
+            document.querySelectorAll('img:not(.lightbox img)').forEach(img => {
+                img.style.cursor = 'zoom-in';
+                img.onclick = () => openLightbox(img.src);
+            });
+        });
+    </script>
+
+</body>
+</html>

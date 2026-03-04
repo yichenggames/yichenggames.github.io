@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylized Flame Spirit VFX | Yicheng Lu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; margin: 0; padding: 0; color: #333; line-height: 1.6; background: #fff; font-weight: 500; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
+        header { text-align: center; padding: 40px 0 10px; background-color: #f9f9f9; }
+        header h1 { font-size: 2rem; letter-spacing: 5px; margin: 0; font-weight: 700; }
+        header p { font-size: 0.9rem; letter-spacing: 8px; color: #666; margin-top: 4px; }
+        nav { background-color: #f9f9f9; display: flex; justify-content: center; gap: 160px; padding: 20px 0 40px; border-bottom: 1px solid #f0f0f0; }
+        nav a { text-decoration: none; color: #888; font-size: 1.0rem; transition: 0.3s; }
+        nav a:hover { color: #333; }
+        .back-btn { display: inline-block; margin: 30px 0 10px; color: #888; font-size: 0.9rem; text-decoration: none; }
+        .back-btn:hover { color: #333; }
+        .back-btn i { margin-right: 6px; }
+        .project-header { text-align: center; padding: 40px 0 30px; margin-bottom: 10px; }
+        .project-header h1 { font-size: 2.4rem; font-weight: 700; color: #c0392b; margin: 0; }
+        .project-header p { font-size: 0.85rem; color: #888; margin-top: 8px; }
+        .section-title { font-size: 1.8rem; font-weight: 700; color: #c0392b; margin: 40px 0 10px; }
+        .sub-title { font-size: 1rem; font-weight: 700; color: #c0392b; margin: 20px 0 6px; }
+        .content-text { font-size: 1.05rem; line-height: 1.8; color: #333; margin-bottom: 16px; }
+        .caption { font-size: 0.85rem; color: #888; margin: 6px 0 20px; text-align: center; }
+        ol, ul { font-size: 1.05rem; line-height: 2; color: #333; padding-left: 24px; margin-bottom: 24px; }
+        .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px; }
+        .two-col img { width: 100%; object-fit: contain; background: #f5f5f5; }
+        .three-col { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin-bottom: 16px; }
+        .three-col img { width: 100%; object-fit: contain; background: #f5f5f5; }
+        .carousel { position: relative; overflow: hidden; margin-bottom: 12px; }
+        .carousel-track { display: flex; transition: transform 0.3s ease; }
+        .carousel-track img { min-width: 100%; height: 600px; object-fit: contain; background: #f5f5f5; cursor: zoom-in; }
+        .carousel-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.4); color: white; border: none; padding: 10px 16px; cursor: pointer; font-size: 1.2rem; z-index: 10; }
+        .carousel-btn.prev { left: 8px; }
+        .carousel-btn.next { right: 8px; }
+        .carousel-dots { text-align: center; margin-top: 8px; }
+        .carousel-dots span { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #ccc; margin: 0 4px; cursor: pointer; }
+        .carousel-dots span.active { background: #555; }
+        .lightbox { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 1000; justify-content: center; align-items: center; cursor: pointer; }
+        .lightbox.active { display: flex; }
+        .lightbox img { max-width: 90%; max-height: 90vh; object-fit: contain; }
+        .back-to-top { display: block; text-align: center; margin: 20px auto 40px; color: #888; font-size: 0.9rem; cursor: pointer; }
+        .back-to-top:hover { color: #333; }
+        .footer { text-align: center; padding: 60px 0 30px; border-top: 1px solid #f0f0f0; margin-top: 20px; }
+        .social-links a { color: #333; margin: 0 12px; font-size: 1.2rem; transition: 0.3s; }
+        .social-links a:hover { color: #c0392b; }
+        .copyright { font-size: 0.7rem; color: #aaa; margin-top: 15px; letter-spacing: 1px; }
+        hr.section-divider { border: none; border-top: 1px dotted #ddd; margin: 40px 0; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Yicheng Lu</h1>
+        <p>Personal Portfolio</p>
+    </header>
+
+    <nav>
+        <a href="index.html">About</a>
+        <a href="index.html#level-design">Level Design</a>
+        <a href="index.html#game-design">Game Design</a>
+        <a href="index.html#vfx">VFX Study</a>
+        <a href="index.html#award">Award</a>
+    </nav>
+
+    <div class="container">
+        <a href="index.html#vfx" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Back to VFX Study</a>
+
+        <div class="project-header">
+            <h1>Stylized Flame Spirit Study</h1>
+            <p>VFX Study · EmberGen · Unreal Engine 5 Niagara · 12.2025</p>
+        </div>
+
+        <!-- Description -->
+        <h2 class="section-title">Description</h2>
+        <p class="content-text">This project combines EmberGen and UE5's Niagara System to create a Flame Essence VFX. The core flame animation was first simulated in EmberGen, then exported into multiple Flipbooks and imported into Unreal Engine. Using Niagara, I built the full visual effect for the flame spirit.</p>
+        <p class="content-text">The visual design was inspired by the essence creatures from <strong>Black Myth: Wukong</strong> (see reference image below).</p>
+        <img src="VFX/StylizedFlame/wukong_reference.png" style="width: 100%; object-fit: contain; background: #f5f5f5; margin-bottom: 8px;" alt="">
+        <p class="caption">Reference — Essence Creatures from Black Myth: Wukong</p>
+
+        <hr class="section-divider">
+
+        <!-- Final Result -->
+        <h2 class="section-title">Final Result</h2>
+        <a href="https://youtu.be/MgqeZqbZQxc" target="_blank" style="display: block; position: relative; margin-bottom: 20px;">
+            <img src="https://img.youtube.com/vi/MgqeZqbZQxc/maxresdefault.jpg" style="width: 100%; display: block;" alt="Stylized Flame Spirit Final Result">
+            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 70px; height: 70px; background: rgba(255,0,0,0.85); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                <div style="width: 0; height: 0; border-top: 18px solid transparent; border-bottom: 18px solid transparent; border-left: 28px solid white; margin-left: 6px;"></div>
+            </div>
+        </a>
+
+        <hr class="section-divider">
+
+        <!-- EmberGen Part -->
+        <h2 class="section-title">EmberGen Part</h2>
+
+        <p class="sub-title">Overall Logic:</p>
+        <ol>
+            <li>Created a main flame emitter with larger, slower-moving particles to form the core flame body.</li>
+            <li>Added a secondary emitter that moves in a looping, Möbius-like path around the main flame. Introduced random motion to make the movement feel more natural.</li>
+            <li>Adjusted parameters such as tear, dissipation, and diffusion to refine flame behavior.</li>
+            <li>Exported the simulation as a Flipbook for integration into Unreal Engine.</li>
+        </ol>
+
+        <!-- Möbius-like trajectory -->
+        <p class="sub-title">Realize the Möbius-like Trajectory</p>
+        <p class="content-text">To make the secondary flame move naturally, I exposed the Shape Emitter's Location and added an Oscillator to drive motion.</p>
+        <p class="content-text">For the Möbius-like trajectory:</p>
+
+        <p class="sub-title">Step 1: 2D Circular Motion</p>
+        <p class="content-text">Created a 2D circular motion on the XY plane by setting the Y phase offset to 90°.</p>
+        <img src="VFX/StylizedFlame/mobius motion_1.png" style="width: 100%; margin-bottom: 8px;" alt="">
+        <p class="caption">2D circular motion on XY plane</p>
+
+        <p class="sub-title">Step 2: Z-axis Oscillation</p>
+        <p class="content-text">Added Z-axis oscillation by changing the Z frequency from 1 to 2, so opposite points along the circle move vertically.</p>
+        <img src="VFX/StylizedFlame/mobius motion_2.png" style="width: 100%; margin-bottom: 8px;" alt="">
+        <p class="caption">Z-axis oscillation added</p>
+
+        <p class="content-text">When viewed from a different camera angle, this circular + vertical motion visually forms a Möbius-loop movement pattern.</p>
+        <img src="VFX/StylizedFlame/mobiusmotion_f.gif" style="width: 100%; margin-bottom: 8px;" alt="">
+
+        <p class="sub-title">Iteration: Making Motion More Natural</p>
+        <p class="content-text">To make the Möbius-loop motion more natural and dynamic:</p>
+        <ol>
+            <li>Added another Mod: Oscillator to adjust the X amount of the existing Oscillator.</li>
+            <li>Set the X range to 60%–100% and increased frequency from 1 to 2.</li>
+            <li>Adjusted the X phase to 180° for smoother looping transitions.</li>
+        </ol>
+        <img src="VFX/StylizedFlame/mobiusmotion_f2.gif" style="width: 100%; margin-bottom: 8px;" alt="">
+        <p class="caption">Möbius motion iteration</p>
+        <p class="content-text">Introduced random variations to the XY minimum amount, frequency, and phase values to create a more organic, less mechanical movement pattern.</p>
+
+        <hr class="section-divider">
+
+        <!-- Final Result in EmberGen -->
+        <h2 class="section-title">Final Result in EmberGen</h2>
+        <p class="content-text">After iterating various parameters — including Velocity Transfer, Injection, Dissipation, Shredding, Diffusion, and Solid Ground — the final flame essence in EmberGen achieved a stable and dynamic look. Then I exported the simulation as multiple Flipbooks with different frame ranges to provide more flexibility when using them in Unreal Engine 5.</p>
+        <img src="VFX/StylizedFlame/flamespirit_nodes.png" style="width: 100%; object-fit: contain; background: #f5f5f5; margin-bottom: 8px;" alt="">
+        <p class="caption">EmberGen node setup</p>
+        <img src="VFX/StylizedFlame/WukongFlameSpirit_demo_Embergen.gif" style="width: 100%; margin-bottom: 8px;" alt="">
+        <p class="caption">EmberGen result</p>
+
+        <hr class="section-divider">
+
+        <!-- UE5 Part -->
+        <h2 class="section-title">UE5 Part</h2>
+
+        <p class="sub-title">Niagara System Design Concept</p>
+        <ul>
+            <li>The overall structure consists of a large central flame surrounded by smaller flames orbiting around it.</li>
+            <li>The small flames move in a circular path while randomly shifting up and down along the Z-axis to create a more dynamic, natural motion.</li>
+        </ul>
+
+        <p class="sub-title">Production Process</p>
+        <ol>
+            <li>Imported the Flipbook texture and created a master material for the flame.</li>
+            <li>In Niagara, if the SubUV animation plays too fast, adjust the particle lifetime, because the animation speed is tied to particle lifespan.</li>
+            <li>The main flame emitter forms the core body of the flame.</li>
+            <li>For the small orbiting flames, used the <strong>Rotate Around Point</strong> module to create circular motion around the central flame.</li>
+        </ol>
+
+        <div class="carousel" id="carousel-ue5flames">
+            <div class="carousel-track">
+                <img src="VFX/StylizedFlame/MainFlame_UE5.png" alt="" data-caption="Main Flame Emitter">
+                <img src="VFX/StylizedFlame/SecondaryFlame_UE5.png" alt="" data-caption="Small Flame Emitter — Rotation Setting">
+            </div>
+            <button class="carousel-btn prev" onclick="moveCarousel('carousel-ue5flames', -1)">&#8249;</button>
+            <button class="carousel-btn next" onclick="moveCarousel('carousel-ue5flames', 1)">&#8250;</button>
+            <div class="carousel-dots" id="dots-carousel-ue5flames"></div>
+        </div>
+        <p class="caption" id="caption-carousel-ue5flames">Main Flame Emitter</p>
+
+        <ol start="5">
+            <li>Duplicated multiple small flame emitters and adjusted their phase offsets so each one orbits from a different starting position. Then modified the rotation curves to vary their movement timing and direction, creating a more dynamic and natural circular motion around the main flame.</li>
+            <img src="VFX/StylizedFlame/WukongFlame_Rotation.gif" alt="">
+            <li>Optimized the main flame by adding a second large flame emitter using a more transparent Flipbook exported from EmberGen. This secondary layer overlaps the original flame, making the overall effect more vibrant and dynamic.</li>
+            <li>Created random ember particles to simulate the small sparks generated by the burning flame:
+                <ul>
+                    <li>Particle size and spawn count are randomized.</li>
+                    <li>Particles emit outward from the flame's center, varying in number and scale to achieve a natural burning ember effect.</li>
+                </ul>
+            </li>
+        </ol>
+
+        <img src="VFX/StylizedFlame/flamesparks.png" style="width: 100%; object-fit: contain; background: #f5f5f5; margin-bottom: 8px;" alt="">
+        <p class="caption">Flame sparks emitter setup</p>
+
+        <p class="content-text">After fine-tuning various parameters, the final flame essence effect was completed and is shown in the demo video at the top of this page.</p>
+
+    </div>
+
+    <a class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        <i class="fa-solid fa-arrow-up"></i> Back to Top
+    </a>
+
+    <footer class="footer">
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/yicheng-lu-33885a1ba/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+        <div class="copyright">© 2021 by Yicheng Lu.</div>
+    </footer>
+
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img" src="" alt="">
+    </div>
+
+    <script>
+        function moveCarousel(id, dir) {
+            const carousel = document.getElementById(id);
+            const track = carousel.querySelector('.carousel-track');
+            const imgs = track.querySelectorAll('img');
+            let current = parseInt(track.dataset.current || 0);
+            current = (current + dir + imgs.length) % imgs.length;
+            track.dataset.current = current;
+            track.style.transform = `translateX(-${current * 100}%)`;
+            const dots = document.querySelectorAll(`#dots-${id} span`);
+            dots.forEach((d, i) => d.classList.toggle('active', i === current));
+            const captionEl = document.getElementById(`caption-${id}`);
+            if (captionEl && imgs[current].dataset.caption) {
+                captionEl.textContent = imgs[current].dataset.caption;
+            }
+        }
+
+        function openLightbox(src) {
+            document.getElementById('lightbox-img').src = src;
+            document.getElementById('lightbox').classList.add('active');
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.carousel').forEach(carousel => {
+                const id = carousel.id;
+                const imgs = carousel.querySelectorAll('img');
+                const dotsContainer = document.getElementById(`dots-${id}`);
+                if (!dotsContainer) return;
+                imgs.forEach((_, i) => {
+                    const dot = document.createElement('span');
+                    if (i === 0) dot.classList.add('active');
+                    dot.onclick = () => {
+                        carousel.querySelector('.carousel-track').dataset.current = i - 1;
+                        moveCarousel(id, 1);
+                    };
+                    dotsContainer.appendChild(dot);
+                });
+            });
+
+            document.querySelectorAll('img:not(.lightbox img)').forEach(img => {
+                img.style.cursor = 'zoom-in';
+                img.onclick = () => openLightbox(img.src);
+            });
+        });
+    </script>
+
+</body>
+</html>
